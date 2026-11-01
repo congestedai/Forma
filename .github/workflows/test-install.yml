@@ -29,7 +29,6 @@ jobs:
     env:
       NODE_OPTIONS: --max-old-space-size=512
       FORMA_RELEASE_TAG: ${{ inputs.tag }}
-      FORMA_QA_DIR: ${{ runner.temp }}/forma-qa-${{ matrix.id }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
@@ -38,6 +37,8 @@ jobs:
         with:
           node-version: 22.12.0
       - name: Install public package and exercise native CAD through MCP
+        env:
+          FORMA_QA_DIR: ${{ runner.temp }}/forma-qa-${{ matrix.id }}
         run: node scripts/test-release.mjs
       - name: Keep bounded proof and generated example image
         if: always()
@@ -45,6 +46,6 @@ jobs:
         with:
           name: install-${{ matrix.id }}
           path: |
-            ${{ env.FORMA_QA_DIR }}/proof.json
-            ${{ env.FORMA_QA_DIR }}/smoke.png
+            ${{ runner.temp }}/forma-qa-${{ matrix.id }}/proof.json
+            ${{ runner.temp }}/forma-qa-${{ matrix.id }}/smoke.png
           retention-days: 3

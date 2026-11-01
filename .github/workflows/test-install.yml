@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Published release tag
+        description: Release tag (published or maintainer draft)
         required: true
         default: v0.6.0-preview.20261101
 
@@ -39,6 +39,7 @@ jobs:
       - name: Install public package and exercise native CAD through MCP
         env:
           FORMA_QA_DIR: ${{ runner.temp }}/forma-qa-${{ matrix.id }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/test-release.mjs
       - name: Keep bounded proof and generated example image
         if: always()

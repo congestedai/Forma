@@ -6,7 +6,7 @@ import { dirname, isAbsolute, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 
-// Only the public compiled artifact is installed. No private source or user model.
+// Only a compiled release asset or an explicit local candidate is installed. No private source or user model.
 const tag = process.env.FORMA_RELEASE_TAG ?? 'v0.6.0-preview.20261101';
 assert(/^v\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?$/.test(tag), 'Invalid release tag');
 const root = process.env.FORMA_QA_DIR;
@@ -20,6 +20,7 @@ const proof = { tag, platform: process.platform, arch: process.arch, node: proce
 let server, bridge, serverPid, browserPid;
 const children = new Set();
 const alive = pid => { try { process.kill(pid, 0); return true; } catch { return false; } };
+const exited = child => child.exitCode !== null || child.signalCode !== null;
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const start = (args, env = {}) => {
   const child = spawn(process.execPath, args, { windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'], env: { ...process.env, ...env } });
@@ -29,14 +30,34 @@ const npmCli = [join(dirname(process.execPath), 'node_modules/npm/bin/npm-cli.js
 assert(npmCli, 'Expected npm alongside Node.js');
 const npm = args => execFileSync(process.execPath, [npmCli, ...args], { windowsHide: true, encoding: 'utf8', env: { ...process.env, npm_config_cache: join(root, 'npm-cache') }, maxBuffer: 1024 * 1024 });
 try {
-  const api = await fetch(`https://api.github.com/repos/congestedai/Forma/releases/tags/${tag}`, { headers: { 'User-Agent': 'Forma-public-install-check' } });
-  assert(api.ok, `Release lookup failed: ${api.status}`);
-  const release = await api.json(), asset = release.assets.find(x => x.name === 'Forma-cli.tgz');
-  assert(asset && asset.state === 'uploaded');
-  const packageBytes = Buffer.from(await (await fetch(asset.browser_download_url)).arrayBuffer());
-  assert.equal(`sha256:${sha(packageBytes)}`, asset.digest);
-  const sums = await (await fetch(release.assets.find(x => x.name === 'SHA256SUMS.txt').browser_download_url)).text();
-  assert(sums.split('\n').includes(`${sha(packageBytes)}  Forma-cli.tgz`));
+  let packageBytes;
+  if (process.env.FORMA_QA_TARBALL) {
+    assert(isAbsolute(process.env.FORMA_QA_TARBALL), 'Local candidate path must be absolute');
+    packageBytes = await readFile(process.env.FORMA_QA_TARBALL);
+    proof.source = 'local-candidate';
+  } else {
+    const apiHeaders = { 'User-Agent': 'Alien-Forma-install-check', Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}) };
+    const api = await fetch(`https://api.github.com/repos/congestedai/Forma/releases/tags/${tag}`, { headers: apiHeaders });
+    assert(api.ok, `Release lookup failed: ${api.status}`);
+    const release = await api.json(), asset = release.assets.find(x => x.name === 'Forma-cli.tgz');
+    assert(asset && asset.state === 'uploaded');
+    const download = async asset => {
+      assert(asset && asset.state === 'uploaded', 'Release asset is not ready');
+      // The runner token is sent only to api.github.com. Signed asset redirects are never logged.
+      const response = release.draft
+        ? await fetch(`https://api.github.com/repos/congestedai/Forma/releases/assets/${asset.id}`, { headers: { ...apiHeaders, Accept: 'application/octet-stream' } })
+        : await fetch(asset.browser_download_url);
+      assert(response.ok, `Asset download failed: ${response.status}`);
+      return Buffer.from(await response.arrayBuffer());
+    };
+    packageBytes = await download(asset);
+    assert.equal(`sha256:${sha(packageBytes)}`, asset.digest);
+    const sums = (await download(release.assets.find(x => x.name === 'SHA256SUMS.txt'))).toString('utf8');
+    assert(sums.split('\n').includes(`${sha(packageBytes)}  Forma-cli.tgz`));
+    proof.source = release.draft ? 'draft-release-asset' : 'published-release';
+  }
   const tarball = join(root, 'Forma-cli.tgz'); await writeFile(tarball, packageBytes, { flag: 'wx' });
   proof.packageSha256 = sha(packageBytes);
   const prefix = join(root, 'installed');
@@ -115,10 +136,10 @@ try {
   proof.nativeSvgExtrusion = true; proof.native3mf = true; proof.exactSaveReopen = true; proof.actualPng = true; proof.passed = true;
 } catch (error) { proof.error = { message: error.message.slice(0, 1800) }; process.exitCode = 1; }
 finally {
-  if (bridge) { bridge.stdin.end(); for (let i = 0; bridge.exitCode === null && i < 50; i++) await wait(100); if (bridge.exitCode === null) bridge.kill(); }
-  if (server) { server.kill(); for (let i = 0; server.exitCode === null && i < 30; i++) await wait(100); }
+  if (bridge) { bridge.stdin.end(); for (let i = 0; !exited(bridge) && i < 50; i++) await wait(100); if (!exited(bridge)) bridge.kill(); }
+  if (server) { server.kill(); for (let i = 0; !exited(server) && i < 30; i++) await wait(100); }
   for (let i = 0; browserPid && alive(browserPid) && i < 30; i++) await wait(100);
-  proof.cleanup = { bridgeClosed: !bridge || bridge.exitCode !== null, serverClosed: !server || server.exitCode !== null, browserClosed: !browserPid || !alive(browserPid) };
+  proof.cleanup = { bridgeClosed: !bridge || exited(bridge) && !alive(bridge.pid), serverClosed: !server || exited(server) && !alive(serverPid ?? server.pid), browserClosed: !browserPid || !alive(browserPid) };
   if (!Object.values(proof.cleanup).every(Boolean)) { proof.passed = false; proof.cleanupFailed = true; process.exitCode = 1; }
   await writeFile(join(root, 'proof.json'), JSON.stringify(proof, null, 2) + '\n');
   console.log(JSON.stringify(proof));

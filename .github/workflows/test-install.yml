@@ -6,7 +6,7 @@ on:
       tag:
         description: Published release or preview tag
         required: true
-        default: v0.6.2-preview.20261101
+        default: v0.6.3-preview.20261101
 
 permissions:
   contents: read

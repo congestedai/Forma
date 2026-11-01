@@ -11,4 +11,6 @@ Notes distinguish checked platforms, measured improvements and known limitations
 
 ## Current preview
 
+[0.6.3-preview.20261101](https://github.com/congestedai/Forma/releases/tag/v0.6.3-preview.20261101) adds a compact wordmark, Windows product metadata and icon, and Microsoft Store packaging preparation. The portable remains unsigned; a Store edition is not published yet. [Native installation and basic CAD checks](https://github.com/congestedai/Forma/actions/runs/41343434811) passed on Linux x64 and both Mac architectures.
+
 [0.6.2-preview.20261101](https://github.com/congestedai/Forma/releases/tag/v0.6.2-preview.20261101) introduces eight local interface languages and automatic detection, the Alien Forma product name, and an MCP automation-language correction. 0.6.1 is superseded because its MCP browser startup can fail on non-Portuguese systems. Published assets are preserved unchanged.

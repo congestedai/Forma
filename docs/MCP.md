@@ -28,7 +28,7 @@ Start the application using the npm command in the [installation guide](INSTALAC
       "command": "npx",
       "args": [
         "--yes",
-        "--package=https://github.com/congestedai/Forma/releases/download/v0.6.2-preview.20261101/Forma-cli.tgz",
+        "--package=https://github.com/congestedai/Forma/releases/download/v0.6.3-preview.20261101/Forma-cli.tgz",
         "forma", "mcp", "--root", "ABSOLUTE_PATH_TO_PROJECT_FOLDER"
       ]
     }

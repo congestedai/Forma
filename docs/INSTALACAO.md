@@ -17,7 +17,7 @@ Get-FileHash .\Forma-windows-x64-portable.exe -Algorithm SHA256
 With Node.js 22.12 or newer and npm installed, start this release without an npm account:
 
 ```sh
-npm exec --yes --package=https://github.com/congestedai/Forma/releases/download/v0.6.2-preview.20261101/Forma-cli.tgz -- forma
+npm exec --yes --package=https://github.com/congestedai/Forma/releases/download/v0.6.3-preview.20261101/Forma-cli.tgz -- forma
 ```
 
 This downloads the compiled application and opens it in your default browser. Keep the terminal open while using Alien Forma; Ctrl+C stops the server. Add `--no-open` after `forma` to start without opening a browser automatically.
@@ -27,7 +27,7 @@ An AI assistant with permission to install and start local software can also run
 To keep the command installed for your user, without `sudo`:
 
 ```sh
-npm install --global --prefix "$HOME/.local" https://github.com/congestedai/Forma/releases/download/v0.6.2-preview.20261101/Forma-cli.tgz
+npm install --global --prefix "$HOME/.local" https://github.com/congestedai/Forma/releases/download/v0.6.3-preview.20261101/Forma-cli.tgz
 "$HOME/.local/bin/forma"
 ```
 
@@ -52,7 +52,7 @@ forma --projects-dir
 
 Ctrl+C stops the server. An occupied port is rejected to preserve an existing session. Browser and portable profiles are separate; export your theme library to transfer it. Save projects and keep an external backup before updating.
 
-Version 0.6.2 remains a preview. Windows checks and native Linux x64, macOS Intel, and macOS Apple Silicon checks passed for this exact package, including installation, server, MCP, SVG extrusion, exact save/reopen, 3MF, and PNG. See the [Node.js 22.12.0 results](https://github.com/congestedai/Forma/actions/runs/41341093179). This does not certify every desktop environment or CAD tool; read the release notes for limitations.
+Version 0.6.3 remains a preview. Windows checks and native Linux x64, macOS Intel, and macOS Apple Silicon checks passed for this exact package, including installation, server, MCP, SVG extrusion, exact save/reopen, 3MF, and PNG. See the [Node.js 22.12.0 results](https://github.com/congestedai/Forma/actions/runs/41343434811). This does not certify every desktop environment or CAD tool; read the release notes for limitations.
 
 ## Interface language
 

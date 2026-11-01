@@ -1,0 +1,50 @@
+name: Test published install
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published release tag
+        required: true
+        default: v0.6.0-preview.20261101
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        include:
+          - id: linux-x64
+            os: ubuntu-24.04
+          - id: macos-arm64
+            os: macos-15
+          - id: macos-x64
+            os: macos-15-intel
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 12
+    env:
+      NODE_OPTIONS: --max-old-space-size=512
+      FORMA_RELEASE_TAG: ${{ inputs.tag }}
+      FORMA_QA_DIR: ${{ runner.temp }}/forma-qa-${{ matrix.id }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22.12.0
+      - name: Install public package and exercise native CAD through MCP
+        run: node scripts/test-release.mjs
+      - name: Keep bounded proof and generated example image
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: install-${{ matrix.id }}
+          path: |
+            ${{ env.FORMA_QA_DIR }}/proof.json
+            ${{ env.FORMA_QA_DIR }}/smoke.png
+          retention-days: 3

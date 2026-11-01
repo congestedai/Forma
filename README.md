@@ -2,9 +2,9 @@
 
 CAD paramétrico da **CongestedAI**, com ferramentas locais de modelagem, pintura e texturas e integração com assistentes de IA por MCP.
 
-**[Baixar o Forma](https://github.com/congestedai/Forma/releases) · [Versão estável mais recente](https://github.com/congestedai/Forma/releases/latest) · [Como instalar](docs/INSTALACAO.md) · [Temas](docs/TEMAS.md)**
+**[Baixar o Forma](https://github.com/congestedai/Forma/releases) · [Instalar por comando](docs/INSTALACAO.md#macos-e-linux-por-comando) · [Como instalar](docs/INSTALACAO.md) · [Temas](docs/TEMAS.md)**
 
-Este repositório reúne os downloads oficiais, notas de versão, documentação e relatos de problemas. O código-fonte original do Forma é privado; este repositório não é uma licença de código aberto do aplicativo.
+Este repositório reúne os downloads oficiais, notas de versão, documentação, relatos de problemas e scripts de validação da distribuição. O código-fonte original do aplicativo é privado; este repositório não é uma licença de código aberto do aplicativo.
 
 ## Downloads
 
@@ -13,9 +13,9 @@ Este repositório reúne os downloads oficiais, notas de versão, documentação
 | Windows x64 portátil | Abra o executável, sem instalar Node.js. Preserve a pasta Forma-data ao atualizar. |
 | Pacote por comandos (.tgz) | Instalação local com Node.js 22.12 ou superior e ponte MCP. |
 
-Os arquivos estão anexados a cada [release](https://github.com/congestedai/Forma/releases), acompanhados de SHA256SUMS.txt. Windows é a plataforma conferida nesta máquina. Linux e macOS ainda precisam de validação nativa; não são anunciados como suporte estável.
+Os arquivos estão anexados a cada [release](https://github.com/congestedai/Forma/releases), acompanhados de SHA256SUMS.txt. O portátil Windows foi conferido nesta máquina. O pacote por comandos passou por instalação, servidor, MCP, extrusão simples, salvamento/reabertura, 3MF e captura PNG em Linux x64, macOS Intel e macOS Apple Silicon, com Node.js 22.12.0. Veja a [execução dos testes](https://github.com/congestedai/Forma/actions/runs/41325799758). São testes básicos da prévia, sem promessa de validação de todas as ferramentas ou de desempenho.
 
-Releases marcadas **Pre-release** são versões de teste. Somente uma versão publicada como estável aparece no atalho “Versão estável mais recente”. Se ainda não houver uma estável publicada, use a lista de releases para consultar as prévias disponíveis.
+Releases marcadas **Pre-release** são versões de teste. A versão atual é uma prévia; ainda não há uma versão estável publicada. As limitações conhecidas constam nas notas da release.
 
 ## Uso e apoio
 
@@ -31,4 +31,4 @@ O desenvolvimento do Forma utiliza ferramentas de IA. O MCP permite que clientes
 
 O Forma utiliza bibliotecas de terceiros com suas próprias licenças, incluindo React, Three.js e Manifold. Os [avisos completos](THIRD_PARTY_NOTICES.txt) acompanham cada distribuição; a licença do Forma não restringe os direitos concedidos pelos autores dessas bibliotecas.
 
-Encontrou um problema? [Abra um relato](https://github.com/congestedai/Forma/issues/new/choose) com a versão e uma reprodução pequena. Não publique senhas, chaves, documentos pessoais nem projetos confidenciais.
+Encontrou um problema? [Abra um relato](https://github.com/congestedai/Forma/issues/new/choose) com a versão e uma reprodução pequena. As sugestões e os relatos da comunidade são recebidos por Issues; a criação de pull requests é restrita a colaboradores convidados. Não publique senhas, chaves, documentos pessoais nem projetos confidenciais.

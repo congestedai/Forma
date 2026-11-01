@@ -1,24 +1,24 @@
-name: Relatar um problema
-description: Informe a versão e como reproduzir.
+name: Report a problem
+description: Include the release version and reproduction steps.
 body:
   - type: input
     id: version
     attributes:
-      label: Versão do Forma
-      placeholder: Copie a tag da release usada
+      label: Alien Forma version
+      placeholder: Copy the release tag you are using
     validations:
       required: true
   - type: input
     id: platform
     attributes:
-      label: Sistema e distribuição
-      placeholder: Windows 11, portátil x64
+      label: Operating system and distribution
+      placeholder: Windows 11, portable x64
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Como reproduzir e o que aconteceu
-      description: Use uma reprodução pequena; não anexe dados privados.
+      label: Steps to reproduce and actual result
+      description: Use a small reproduction; do not attach private data.
     validations:
       required: true

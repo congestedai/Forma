@@ -1,135 +1,133 @@
-LICENÇA DE USO DO FORMA
-Versão 1.4 — 29 de outubro de 2026
+ALIEN FORMA SOFTWARE LICENSE
+Version 1.4 — October 29, 2026
+English translation and full product name updated November 1, 2026.
+“Forma” is the short name of Alien Forma.
 
-Direitos autorais sobre o código original reservados aos respectivos titulares.
-Nesta licença, "titulares" são os detentores dos direitos patrimoniais sobre
-o código e os recursos originais do Forma. Componentes de terceiros são
-tratados separadamente na seção 6.
+Copyright in the original code remains with its respective holders.
+“Rightsholders” means the owners of the economic rights in the original
+Alien Forma code and assets. Third-party components are addressed separately
+in section 6.
 
-1. USO PESSOAL GRATUITO
+1. FREE PERSONAL USE
 
-É concedida autorização não exclusiva para instalar e utilizar esta versão
-do Forma gratuitamente para uso pessoal, sem finalidade comercial, incluindo
-aprendizado e projetos de hobby. Esse uso não exige contribuição.
+You receive non-exclusive permission to install and use this version free
+of charge for personal, non-commercial use, including learning and hobby
+projects. No contribution is required for this use.
 
-2. USO COMERCIAL MEDIANTE CONTRIBUIÇÃO
+2. COMMERCIAL USE AFTER A CONTRIBUTION
 
-Para utilizar o Forma comercialmente, é necessário ter realizado uma
-contribuição ao projeto de pelo menos US$ 1 (um dólar americano) nos 12 meses
-imediatamente anteriores à data de uso. Uso comercial inclui atividades
-profissionais, trabalho remunerado, produção de bens ou serviços para venda
-e uso nas atividades de uma empresa, mesmo sem receita diretamente atribuída
-ao uso do programa.
+Commercial use requires a contribution to the project of at least US$1
+(one US dollar) within the 12 months immediately preceding the date of use.
+Commercial use includes professional activities, paid work, producing goods
+or services for sale, and use in a company's activities, even without revenue
+directly attributable to the application.
 
-Uma única contribuição válida cobre a empresa beneficiária inteira, incluindo
-seus colaboradores no exercício das atividades dessa empresa. Não há cobrança
-por pessoa, instalação ou quantidade de usuários. Profissionais independentes
-também podem cumprir a condição por sua própria contribuição.
+One valid contribution covers the entire benefiting company, including its
+staff acting for that company. There is no charge per person, installation
+or number of users. Independent professionals may satisfy this condition
+through their own contribution.
 
-A contribuição deve ser feita por um canal oficial do Forma. Quando aceita
-em outra moeda, aplica-se o valor equivalente indicado pelo canal no momento
-do pagamento. Guarde o comprovante para demonstrar o cumprimento da condição.
-Após 12 meses, uma nova contribuição de pelo menos US$ 1 é necessária para
-continuar o uso comercial. Não há renovação ou cobrança automática pelo Forma.
+Contribute through an official Alien Forma channel. When another currency
+is accepted, use the equivalent amount indicated by that channel at payment.
+Keep your receipt as evidence. After 12 months, another contribution of at
+least US$1 is required to continue commercial use. Alien Forma itself does
+not automatically renew or charge you.
 
-O mínimo considera o valor pago ao projeto antes das taxas do intermediador;
-não é necessário repor essas taxas. Uma assinatura em plataforma de apoio é
-opcional e pode ter cobranças recorrentes, conforme a opção escolhida nessa
-plataforma. Cancelar a assinatura não encurta os 12 meses cobertos por uma
-contribuição válida já realizada. Não é necessário manter uma assinatura ativa.
+The minimum is the amount paid to the project before intermediary fees;
+you do not need to replace those fees. A membership on a support platform
+is optional and may renew according to your chosen settings there.
+Cancelling a membership does not shorten the 12 months covered by an
+already valid contribution. An active membership is not required.
 
-Essa contribuição é uma condição da autorização comercial; apoios feitos por
-quem utiliza o Forma apenas pessoalmente continuam sendo voluntários.
-O apoio é apresentado como financiamento do desenvolvimento do Forma,
-incluindo correções, melhorias, testes e novas integrações. Obrigado pelo apoio.
+This contribution is a condition of commercial permission. Support from
+people using Alien Forma only personally remains voluntary. Support funds
+its development, including fixes, improvements, testing and integrations.
+Thank you for supporting the project.
 
-Os valores sugeridos são US$ 1, US$ 5 e US$ 40. Também é possível
-contribuir com valor livre; para a autorização comercial, permanece o mínimo
-de US$ 1. Todos os valores válidos concedem a mesma cobertura comercial.
-Contribuir acima do mínimo é opcional e não altera as ferramentas do CAD.
+Suggested amounts are US$1, US$5 and US$40. You may also choose another
+amount; the commercial minimum remains US$1. All valid amounts provide
+the same commercial coverage. Paying more is optional and does not change
+the CAD tools available in the application.
 
-Modalidades de apoio podem oferecer pacotes de temas visuais para baixar,
-conforme a descrição publicada no canal. Esses arquivos são opcionais e
-distribuídos separadamente; todas as ferramentas do aplicativo permanecem
-disponíveis para todos. Temas obtidos regularmente podem continuar a ser
-usados offline após cancelar a assinatura. O acesso a novos pacotes segue
-as condições da modalidade escolhida, sem promessa de frequência de entrega.
-Agradecimentos públicos a empresas são opcionais e dependem de autorização
-para divulgar o nome. Esses benefícios não alteram a cobertura comercial
-do aplicativo nem exigem autenticação ou validação de assinatura no Forma.
+Support tiers may offer downloadable visual theme packs as described on
+the support channel. They are optional, distributed separately, and all
+application tools remain available to everyone. Properly obtained themes
+may continue to be used offline after cancelling a membership. Access to
+new packs follows the selected tier's conditions, with no promised release
+frequency. Public company acknowledgements are optional and require consent
+to publish the name. These benefits do not change commercial coverage or
+require authentication or membership verification inside Alien Forma.
 
-Empresas podem propor o financiamento de novos recursos com valor livre.
-Escopo, viabilidade, prioridade e prazo de um desenvolvimento específico
-devem ser acordados previamente. Uma contribuição geral não constitui, por
-si só, encomenda de recurso nem garantia de entrega ou de prazo. As melhorias
-financiadas para o Forma são destinadas à versão comum, disponível a todos
-sob os termos de uso aplicáveis, sem exclusividade para o financiador.
+Companies may propose funding new features with a custom amount. Scope,
+feasibility, priority and timing of a specific development must be agreed
+in advance. A general contribution does not itself commission a feature
+or guarantee delivery or a deadline. Funded improvements are intended for
+the common application available to everyone under the applicable terms,
+without exclusivity for the funder.
 
-O aplicativo é o mesmo para todos, com todas as ferramentas do CAD. Não há
-chave de ativação, verificação de pagamento, bloqueio de funções ou envio de
-comprovantes pelo aplicativo. A ausência de bloqueio técnico não dispensa a
-contribuição exigida para a autorização de uso comercial.
+The application and all CAD tools are the same for everyone. There is no
+activation key, payment check, feature lock or receipt submission inside
+the application. The absence of technical restrictions does not waive the
+contribution required for commercial permission.
 
-A contribuição não transfere a titularidade do código, da marca ou
-dos recursos originais do Forma. Esta revisão rege as cópias distribuídas com
-estes termos e não revoga permissões válidas concedidas anteriormente sob
-outras condições.
+Contributions do not transfer ownership of the code, name or original
+assets. This revision governs copies distributed with these terms and
+does not revoke valid permissions previously granted under other terms.
 
-3. SEUS PROJETOS
+3. YOUR PROJECTS
 
-Esta licença não reivindica titularidade sobre os modelos, desenhos, imagens
-ou outros arquivos que você criar usando o Forma. Você pode explorar seus
-próprios projetos comercialmente, respeitando os direitos de terceiros sobre
-materiais que tenha importado ou utilizado. O uso comercial do aplicativo
-para criar ou modificar esses projetos está sujeito à seção 2. O fim de um
-período de autorização não transfere nem retira a titularidade de seus
-projetos e não impede a exploração de arquivos já criados regularmente.
+This license claims no ownership of models, drawings, images or other files
+you create using Alien Forma. You may commercially exploit your own projects,
+subject to third-party rights in materials you import or use. Commercial use
+of the application to create or modify them is subject to section 2. Expiry
+of a permission period neither transfers nor removes ownership of your
+projects and does not prevent exploitation of files already lawfully made.
 
-4. CÓPIAS OFICIAIS
+4. OFFICIAL COPIES
 
-Você pode fazer cópias para instalação, uso e salvaguarda. Também pode
-compartilhar gratuitamente cópias oficiais e inalteradas, mantendo esta
-licença e os avisos dos componentes de terceiros. Cada destinatário recebe
-a autorização de uso diretamente dos titulares, sob estes mesmos termos.
+You may make copies for installation, use and backup. You may also freely
+share official, unmodified copies while preserving this license and all
+third-party notices. Each recipient receives permission directly from the
+rightsholders under these same terms.
 
-5. PROTEÇÃO DO CÓDIGO ORIGINAL E DA IDENTIDADE DO FORMA
+5. ORIGINAL CODE AND PRODUCT IDENTITY
 
-Esta licença não concede permissão para modificar o código original do
-Forma, publicar forks ou obras derivadas desse código, redistribuir versões
-modificadas, sublicenciar o código original, vendê-lo como outro produto ou
-apresentar uma distribuição não autorizada como oficial.
+This license does not permit modifying the original code, publishing forks
+or derivative works of that code, redistributing modified versions,
+sublicensing the original code, selling it as another product or presenting
+an unauthorized distribution as official.
 
-Esses atos exigem autorização específica dos titulares, ressalvados os
-direitos que a legislação aplicável assegure independentemente de contrato.
-A autorização para usar o aplicativo comercialmente não equivale a uma
-autorização para comercializar o aplicativo ou seu código.
+These activities require specific permission from the rightsholders,
+except for rights conferred by applicable law independently of contract.
+Permission to use the application commercially is not permission to sell
+the application or its code.
 
-O nome, os logotipos e a identidade visual do Forma não são licenciados para
-identificar produtos de terceiros ou sugerir aprovação, parceria ou origem
-oficial inexistentes. Referências verdadeiras ao uso do Forma são permitidas.
+The name, logos and visual identity are not licensed to identify third-party
+products or suggest nonexistent approval, partnership or official origin.
+Truthful references to using Alien Forma are permitted.
 
-Os titulares e as pessoas especificamente autorizadas por eles podem
-desenvolver e modificar o Forma nos limites de suas próprias autorizações.
+The rightsholders and people specifically authorized by them may develop
+and modify Alien Forma within the limits of their respective permissions.
 
-6. COMPONENTES DE TERCEIROS
+6. THIRD-PARTY COMPONENTS
 
-As restrições desta licença aplicam-se somente ao código e aos recursos
-originais do Forma sobre os quais seus titulares possam dispor.
+These restrictions apply only to the original code and assets over which
+the rightsholders have authority.
 
-Bibliotecas, fontes, ferramentas e outros componentes de terceiros mantêm
-suas próprias licenças, copyrights e permissões. Esses termos prevalecem
-para os respectivos componentes; esta licença não limita direitos de uso,
-cópia, modificação ou redistribuição concedidos por seus autores.
+Third-party libraries, fonts, tools and other components retain their own
+licenses, copyrights and permissions. Their terms prevail for the respective
+components. This license does not restrict rights to use, copy, modify or
+redistribute granted by those components' authors.
 
-Os créditos e avisos disponíveis acompanham o aplicativo no arquivo
-third-party-notices.txt, na mesma pasta deste documento.
+Available credits and notices accompany the distribution in
+THIRD_PARTY_NOTICES.txt or legal/third-party-notices.txt in the application.
 
-7. DISPONIBILIDADE E RESPONSABILIDADE
+7. AVAILABILITY AND LIABILITY
 
-O Forma é fornecido no estado em que se encontra, sem promessa de adequação
-a uma finalidade específica, manutenção ou atualizações futuras. Na máxima
-extensão permitida pela legislação aplicável, seus titulares não assumem
-responsabilidade por danos decorrentes de seu uso ou impossibilidade de uso.
+Alien Forma is provided as is, without a promise of suitability for a
+particular purpose, maintenance or future updates. To the maximum extent
+permitted by applicable law, its rightsholders are not liable for damages
+arising from its use or inability to use it.
 
-Nenhuma disposição afasta direitos obrigatórios previstos em lei. Direitos
-não expressamente concedidos sobre o código original permanecem reservados.
+Nothing excludes mandatory legal rights. Rights in the original code not
+expressly granted remain reserved.

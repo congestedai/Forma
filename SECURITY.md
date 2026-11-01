@@ -1,5 +1,5 @@
-# Privacidade e relatos de segurança
+# Privacy and security reports
 
-Não publique credenciais, documentos pessoais, dados bancários ou projetos confidenciais nas issues. Para problemas comuns, envie uma reprodução mínima sem dados privados e informe a versão exata.
+Do not publish credentials, personal documents, bank details or confidential projects in Issues. For ordinary problems, provide the exact release version and a small reproduction without private data.
 
-Para suspeitas de vulnerabilidade, use a opção de relato privado de vulnerabilidade deste repositório, caso ela esteja habilitada. Se essa opção não estiver disponível, não publique detalhes de exploração nem arquivos sensíveis; abra somente um pedido de canal privado de contato.
+For a suspected vulnerability, use this repository's private vulnerability reporting option if available. Otherwise, open only a request for a private contact channel; do not post exploit details or sensitive files publicly.

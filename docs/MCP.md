@@ -1,25 +1,25 @@
-# Usar com um cliente MCP
+# Use Alien Forma with an MCP client
 
-Instale o pacote por comandos e inicie o Forma antes de conectar a ponte. Veja [Instalação](INSTALACAO.md). O cliente também precisa de Chrome ou Chromium instalado para a sessão isolada de interação.
+Install the command-line package and start Alien Forma before connecting the bridge. See [Installation](INSTALACAO.md). Chrome or Chromium must also be installed for the bridge's isolated interaction session.
 
-Execute forma --projects-dir para localizar a raiz de projetos. Crie dentro dela uma pasta exclusiva para o trabalho e use seu caminho absoluto na configuração do cliente:
+Run `forma --projects-dir` to find the projects root. Create a dedicated folder inside it and use that folder's absolute path in your client configuration:
 
 ```json
 {
   "mcpServers": {
     "forma": {
       "command": "forma",
-      "args": ["mcp", "--root", "CAMINHO_ABSOLUTO_DA_PASTA_DO_PROJETO"]
+      "args": ["mcp", "--root", "ABSOLUTE_PATH_TO_PROJECT_FOLDER"]
     }
   }
 }
 ```
 
-No Windows, alguns clientes exigem forma.cmd no campo command. A raiz padrão do pacote é ~/Forma/Projetos; FORMA_PROJECTS_DIR permite configurar uma raiz absoluta externa. A ponte exige uma subpasta existente dessa raiz e recusa links e sobrescritas. Não conceda acesso a uma pasta com arquivos confidenciais de outros projetos.
+Some Windows clients require `forma.cmd` in the `command` field. The default root is `~/Forma/Projetos`; `FORMA_PROJECTS_DIR` can set another absolute external root. The bridge requires an existing subfolder of that root and rejects links and overwrites. Use a folder dedicated to the current project.
 
-## Configurar sem instalação global no macOS/Linux
+## macOS/Linux setup without a global installation
 
-Inicie o aplicativo com o comando npm do [guia de instalação](INSTALACAO.md#macos-e-linux-por-comando). Crie uma pasta de projeto, por exemplo `mkdir -p "$HOME/Forma/Projetos/IA"`. Depois configure seu cliente MCP:
+Start the application using the npm command in the [installation guide](INSTALACAO.md#macos-and-linux-command-line). Create a project folder, for example `mkdir -p "$HOME/Forma/Projetos/AI"`, then configure your MCP client:
 
 ```json
 {
@@ -29,15 +29,15 @@ Inicie o aplicativo com o comando npm do [guia de instalação](INSTALACAO.md#ma
       "args": [
         "--yes",
         "--package=https://github.com/congestedai/Forma/releases/download/v0.6.0-preview.20261101/Forma-cli.tgz",
-        "forma", "mcp", "--root", "CAMINHO_ABSOLUTO_DA_PASTA_DO_PROJETO"
+        "forma", "mcp", "--root", "ABSOLUTE_PATH_TO_PROJECT_FOLDER"
       ]
     }
   }
 }
 ```
 
-Substitua o último argumento pelo caminho absoluto real; `~` e `$HOME` não são expandidos automaticamente dentro desse JSON. O cliente precisa encontrar Node.js/npm no PATH. O comando de instalação e a ponte MCP cumprem funções diferentes: npm obtém/inicia o software, e MCP disponibiliza suas ferramentas ao assistente. Não há necessidade de uma conta npm para usar esse arquivo do GitHub.
+Replace the last argument with the real absolute path. `~` and `$HOME` are not expanded automatically inside this JSON. The client must find Node.js/npm on PATH. npm obtains and starts the software; MCP exposes its tools to the assistant. Using this GitHub package does not require an npm account.
 
-A ponte disponibiliza descoberta, estado, execução e cancelamento. Comece pela descoberta das capacidades e pelo estado atual; use os identificadores e revisões retornados antes de modificar o documento. Capturas e inspeções ajudam o cliente a conferir o resultado. Essas ferramentas auxiliam a IA, mas não garantem que o modelo desenhe corretamente o objeto desejado.
+The bridge supports capability discovery, status, execution and cancellation. Start with discovery and current status, then use returned identifiers and revisions when changing a document. Captures and inspections help verify the result. These tools do not guarantee that an AI will correctly model the intended object.
 
-O protocolo não é exclusivo de um fornecedor ou modelo. A capacidade de conexão e o tratamento das respostas dependem do cliente MCP. O cliente de IA pode transmitir dados ao seu provedor conforme a configuração escolhida; revise as permissões antes de conceder acesso aos projetos.
+The protocol is not exclusive to any provider or model. Connection support and response handling depend on the MCP client. Your AI client may send project data to its provider according to your settings; review those settings before granting project access.

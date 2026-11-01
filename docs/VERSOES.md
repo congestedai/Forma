@@ -1,8 +1,10 @@
-# Canais e versões
+# Release channels
 
-- **Estável:** versão identificada por uma tag vMAJOR.MINOR.PATCH, publicada após a validação da distribuição. O atalho /releases/latest aponta para a estável mais recente.
-- **Prévia:** versão com sufixo de pré-lançamento, marcada Pre-release. Pode conter limitações ainda em investigação e não substitui automaticamente a estável.
+- **Stable:** tagged `vMAJOR.MINOR.PATCH`, published after distribution validation. `/releases/latest` points to the most recent stable release once one exists.
+- **Preview:** a version with a prerelease suffix, marked **Pre-release**. It can include known limitations and does not automatically replace a stable release.
 
-Cada release deve reunir as notas de versão, os arquivos de download e SHA256SUMS.txt. O executável portátil usa sempre o nome Forma-windows-x64-portable.exe no anexo; o pacote por comandos usa Forma-cli.tgz. A tag da release identifica a versão desses arquivos.
+No stable release has been published yet.
 
-As notas distinguem plataformas conferidas, melhorias medidas e limitações conhecidas. Não atribua metas de desempenho ou compatibilidade universal a uma release sem evidência correspondente. O código-fonte e o histórico de desenvolvimento não são publicados neste repositório.
+Each release includes notes, downloads and `SHA256SUMS.txt`. Current asset names are `Forma-windows-x64-portable.exe` and `Forma-cli.tgz`. The release tag identifies their version. Existing names are retained for compatibility.
+
+Notes distinguish checked platforms, measured improvements and known limitations. Performance targets and universal compatibility are not claimed without supporting evidence. The original application source and development history are private.

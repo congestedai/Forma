@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Instalação e downloads
+  - name: Installation and downloads
     url: https://github.com/congestedai/Forma/releases
-    about: Confira os arquivos e as notas da versão usada.
+    about: Check the files and release notes for your version.

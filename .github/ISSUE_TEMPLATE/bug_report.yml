@@ -1,0 +1,24 @@
+name: Relatar um problema
+description: Informe a versão e como reproduzir.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Versão do Forma
+      placeholder: Copie a tag da release usada
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Sistema e distribuição
+      placeholder: Windows 11, portátil x64
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir e o que aconteceu
+      description: Use uma reprodução pequena; não anexe dados privados.
+    validations:
+      required: true

@@ -37,23 +37,17 @@ try {
     proof.source = 'local-candidate';
   } else {
     const apiHeaders = { 'User-Agent': 'Alien-Forma-install-check', Accept: 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-      ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}) };
-    const releaseId = process.env.FORMA_RELEASE_ID;
-    assert(!releaseId || /^\d+$/.test(releaseId), 'Invalid draft release ID');
-    const endpoint = releaseId ? releaseId : `tags/${tag}`;
-    const api = await fetch(`https://api.github.com/repos/congestedai/Forma/releases/${endpoint}`, { headers: apiHeaders });
+      'X-GitHub-Api-Version': '2022-11-28' };
+    const api = await fetch(`https://api.github.com/repos/congestedai/Forma/releases/tags/${tag}`, { headers: apiHeaders });
     assert(api.ok, `Release lookup failed: ${api.status}`);
     const release = await api.json();
-    assert.equal(release.tag_name, tag, 'Release ID/tag mismatch');
+    assert.equal(release.tag_name, tag, 'Release tag mismatch');
+    assert(!release.draft, 'Only published release assets are tested by remote runners');
     const asset = release.assets.find(x => x.name === 'Forma-cli.tgz');
     assert(asset && asset.state === 'uploaded');
     const download = async asset => {
       assert(asset && asset.state === 'uploaded', 'Release asset is not ready');
-      // The runner token is sent only to api.github.com. Signed asset redirects are never logged.
-      const response = release.draft
-        ? await fetch(`https://api.github.com/repos/congestedai/Forma/releases/assets/${asset.id}`, { headers: { ...apiHeaders, Accept: 'application/octet-stream' } })
-        : await fetch(asset.browser_download_url);
+      const response = await fetch(asset.browser_download_url);
       assert(response.ok, `Asset download failed: ${response.status}`);
       return Buffer.from(await response.arrayBuffer());
     };
@@ -61,7 +55,7 @@ try {
     assert.equal(`sha256:${sha(packageBytes)}`, asset.digest);
     const sums = (await download(release.assets.find(x => x.name === 'SHA256SUMS.txt'))).toString('utf8');
     assert(sums.split('\n').includes(`${sha(packageBytes)}  Forma-cli.tgz`));
-    proof.source = release.draft ? 'draft-release-asset' : 'published-release';
+    proof.source = 'published-release';
   }
   const tarball = join(root, 'Forma-cli.tgz'); await writeFile(tarball, packageBytes, { flag: 'wx' });
   proof.packageSha256 = sha(packageBytes);

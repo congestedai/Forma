@@ -1,0 +1,9 @@
+*.exe
+*.tgz
+*.zip
+*.map
+.env
+.env.*
+Forma-data/
+Projetos/
+node_modules/

@@ -52,7 +52,7 @@ forma --projects-dir
 
 Ctrl+C stops the server. An occupied port is rejected to preserve an existing session. Browser and portable profiles are separate; export your theme library to transfer it. Save projects and keep an external backup before updating.
 
-Version 0.6.2 is a preview. Windows checks are complete; native Linux x64 and macOS Intel/Apple Silicon checks for this exact package are [in progress](https://github.com/congestedai/Forma/actions/runs/41341093179). Read the release notes for current results and limitations.
+Version 0.6.2 remains a preview. Windows checks and native Linux x64, macOS Intel, and macOS Apple Silicon checks passed for this exact package, including installation, server, MCP, SVG extrusion, exact save/reopen, 3MF, and PNG. See the [Node.js 22.12.0 results](https://github.com/congestedai/Forma/actions/runs/41341093179). This does not certify every desktop environment or CAD tool; read the release notes for limitations.
 
 ## Interface language
 

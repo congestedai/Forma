@@ -1,6 +1,6 @@
-FORMA — CRÉDITOS E LICENÇAS DE TERCEIROS
+ALIEN FORMA — THIRD-PARTY CREDITS AND LICENSES
 
-Os componentes abaixo mantêm suas próprias licenças e direitos autorais. A licença do código original do Forma não restringe os direitos concedidos por seus autores.
+The components below retain their own licenses and copyrights. The original Alien Forma code license does not restrict rights granted by their authors.
 Inclui dependências de produção, ferramentas da instalação local, bibliotecas incorporadas e fontes. Pacotes opcionais ausentes são identificados.
 Os avisos da toolchain WASM seguem a receita publicada do Manifold 3.2.1. O binário npm não contém uma seção producers; a versão exata da toolchain desse binário não foi certificada por esta lista.
 

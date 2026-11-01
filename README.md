@@ -13,9 +13,13 @@ This repository contains official downloads, release notes, documentation, issue
 | Windows x64 portable | Run the executable; Node.js is not required. Preserve the adjacent `Forma-data` folder when updating. |
 | Command-line package (.tgz) | Node.js 22.12 or newer; includes the compiled browser application and MCP bridge. |
 
-Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). The Windows portable build was checked locally. Installation, server startup, MCP, a simple extrusion, save/reopen, 3MF export and PNG capture passed on Linux x64, macOS Intel and macOS Apple Silicon using Node.js 22.12.0. See the [test run](https://github.com/congestedai/Forma/actions/runs/41325799758). These are basic preview checks, not validation of every tool or a performance guarantee.
+Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). The current [0.6.2 language preview](https://github.com/congestedai/Forma/releases/tag/v0.6.2-preview.20261101) has passed Windows installation, the actual portable entry, MCP extrusion, exact save/reopen, 3MF export, and PNG capture. Native Linux x64 and macOS Intel/Apple Silicon checks for this exact package are [in progress](https://github.com/congestedai/Forma/actions/runs/41341093179). Earlier versions have their own results; they are not substituted for this package.
 
 The current release is a **preview**. No stable release has been published yet. Read the release notes for known limitations.
+
+## Interface languages
+
+Portuguese, English, Spanish, German, French, Japanese, Russian, and Simplified Chinese. Automatic detection follows browser/system preferences. Change the language in **File → Preferences**; the choice is saved locally. Language packs work offline and preserve project names, expressions, and model data. Translations are AI-assisted and feedback is welcome.
 
 ## Use and support
 

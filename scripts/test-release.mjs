@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 
 // Only a compiled release asset or an explicit local candidate is installed. No private source or user model.
-const tag = process.env.FORMA_RELEASE_TAG ?? 'v0.6.0-preview.20261101';
+const tag = process.env.FORMA_RELEASE_TAG ?? 'v0.6.2-preview.20261101';
 assert(/^v\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?$/.test(tag), 'Invalid release tag');
 const root = process.env.FORMA_QA_DIR;
 assert(root && isAbsolute(root), 'FORMA_QA_DIR must name a new absolute external directory');

@@ -17,7 +17,7 @@ Get-FileHash .\Forma-windows-x64-portable.exe -Algorithm SHA256
 With Node.js 22.12 or newer and npm installed, start this release without an npm account:
 
 ```sh
-npm exec --yes --package=https://github.com/congestedai/Forma/releases/download/v0.6.0-preview.20261101/Forma-cli.tgz -- forma
+npm exec --yes --package=https://github.com/congestedai/Forma/releases/download/v0.6.2-preview.20261101/Forma-cli.tgz -- forma
 ```
 
 This downloads the compiled application and opens it in your default browser. Keep the terminal open while using Alien Forma; Ctrl+C stops the server. Add `--no-open` after `forma` to start without opening a browser automatically.
@@ -27,7 +27,7 @@ An AI assistant with permission to install and start local software can also run
 To keep the command installed for your user, without `sudo`:
 
 ```sh
-npm install --global --prefix "$HOME/.local" https://github.com/congestedai/Forma/releases/download/v0.6.0-preview.20261101/Forma-cli.tgz
+npm install --global --prefix "$HOME/.local" https://github.com/congestedai/Forma/releases/download/v0.6.2-preview.20261101/Forma-cli.tgz
 "$HOME/.local/bin/forma"
 ```
 
@@ -52,4 +52,8 @@ forma --projects-dir
 
 Ctrl+C stops the server. An occupied port is rejected to preserve an existing session. Browser and portable profiles are separate; export your theme library to transfer it. Save projects and keep an external backup before updating.
 
-Basic installation and CAD checks through MCP passed on Linux x64, macOS Intel and Apple Silicon using Node.js 22.12.0. See [GitHub Actions results](https://github.com/congestedai/Forma/actions/runs/41325799758). This does not certify every desktop environment, Linux distribution or CAD tool. The release remains a preview.
+Version 0.6.2 is a preview. Windows checks are complete; native Linux x64 and macOS Intel/Apple Silicon checks for this exact package are [in progress](https://github.com/congestedai/Forma/actions/runs/41341093179). Read the release notes for current results and limitations.
+
+## Interface language
+
+Automatic detection follows your browser/system preference. In File → Preferences, choose Automatic or a specific interface language. This setting belongs to the local profile; project names, expressions, imported theme names, and stored model data are preserved. No online translation service is used.

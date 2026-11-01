@@ -39,9 +39,14 @@ try {
     const apiHeaders = { 'User-Agent': 'Alien-Forma-install-check', Accept: 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
       ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}) };
-    const api = await fetch(`https://api.github.com/repos/congestedai/Forma/releases/tags/${tag}`, { headers: apiHeaders });
+    const releaseId = process.env.FORMA_RELEASE_ID;
+    assert(!releaseId || /^\d+$/.test(releaseId), 'Invalid draft release ID');
+    const endpoint = releaseId ? releaseId : `tags/${tag}`;
+    const api = await fetch(`https://api.github.com/repos/congestedai/Forma/releases/${endpoint}`, { headers: apiHeaders });
     assert(api.ok, `Release lookup failed: ${api.status}`);
-    const release = await api.json(), asset = release.assets.find(x => x.name === 'Forma-cli.tgz');
+    const release = await api.json();
+    assert.equal(release.tag_name, tag, 'Release ID/tag mismatch');
+    const asset = release.assets.find(x => x.name === 'Forma-cli.tgz');
     assert(asset && asset.state === 'uploaded');
     const download = async asset => {
       assert(asset && asset.state === 'uploaded', 'Release asset is not ready');

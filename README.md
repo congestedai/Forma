@@ -2,7 +2,7 @@
 
 Parametric CAD by **CongestedAI**, with local modeling, painting and texturing tools, plus MCP integration for compatible AI assistants. “Forma” is the application's short name.
 
-**[Official website](https://congestedai.github.io/Forma/) · [Download](https://github.com/congestedai/Forma/releases) · [Install with a command](docs/INSTALACAO.md#macos-and-linux-command-line) · [Installation](docs/INSTALACAO.md) · [MCP](docs/MCP.md) · [Themes](docs/TEMAS.md)**
+**[Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) · [Official website](https://congestedai.github.io/Forma/) · [GitHub downloads](https://github.com/congestedai/Forma/releases) · [Install with a command](docs/INSTALACAO.md#macos-and-linux-command-line) · [Installation](docs/INSTALACAO.md) · [MCP](docs/MCP.md) · [Themes](docs/TEMAS.md)**
 
 This repository contains official downloads, release notes, documentation, issue reports and distribution validation scripts. The original application source code is private. This repository does not grant an open-source license for the application.
 
@@ -10,12 +10,15 @@ This repository contains official downloads, release notes, documentation, issue
 
 | Distribution | Requirements |
 | --- | --- |
+| [Microsoft Store — 0.6.4.0](https://apps.microsoft.com/detail/9MW9G4MGBXZL) | Windows 10/11 x64. Install and manage updates through the Store. |
 | Windows x64 portable | Run the executable; Node.js is not required. Preserve the adjacent `Forma-data` folder when updating. |
 | Command-line package (.tgz) | Node.js 22.12 or newer; includes the compiled browser application and MCP bridge. |
 
 Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). The current [0.6.3 desktop preview](https://github.com/congestedai/Forma/releases/tag/v0.6.3-preview.20261101) has passed Windows installation, the actual portable entry, MCP extrusion, exact save/reopen, 3MF export, and PNG capture. Native checks of this exact package also passed on Linux x64, macOS Intel, and macOS Apple Silicon with Node.js 22.12.0: installation, command shim, server, MCP, SVG extrusion, exact save/reopen, 3MF, and PNG. See the [results](https://github.com/congestedai/Forma/actions/runs/41343434811). These are basic preview checks, not validation of every tool or a performance guarantee.
 
-The current release is a **preview**. No stable release has been published yet. Read the release notes for known limitations.
+**Release channels, checked 2 November 2026:** Microsoft Store **0.6.4.0**; GitHub **0.6.3-preview.20261101**. The Store is currently ahead of the GitHub download. New preview builds will be published on **GitHub first**; subsequent Store updates follow Microsoft's review and may arrive later. Compare version numbers and read the [channel guide](docs/VERSOES.md) before choosing a download. Local development builds are not public releases.
+
+The current releases are **previews**. No stable release has been published yet. Read the release notes for known limitations.
 
 ## Interface languages
 

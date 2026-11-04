@@ -6,6 +6,10 @@ import { dirname, isAbsolute, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 
+// Keep the runner's read-only API credential out of npm and the CAD child processes.
+const githubApiToken = process.env.GITHUB_TOKEN;
+delete process.env.GITHUB_TOKEN;
+
 // Only a compiled release asset or an explicit local candidate is installed. No private source or user model.
 const tag = process.env.FORMA_RELEASE_TAG ?? 'v0.6.8-preview.20261103-rc3';
 assert(/^v\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?$/.test(tag), 'Invalid release tag');
@@ -38,8 +42,10 @@ try {
   } else {
     const apiHeaders = { 'User-Agent': 'Alien-Forma-install-check', Accept: 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28' };
+    if (githubApiToken) apiHeaders.Authorization = `Bearer ${githubApiToken}`;
     const api = await fetch(`https://api.github.com/repos/congestedai/Forma/releases/tags/${tag}`, { headers: apiHeaders });
     assert(api.ok, `Release lookup failed: ${api.status}`);
+    proof.releaseLookupAuthenticated = Boolean(githubApiToken);
     const release = await api.json();
     assert.equal(release.tag_name, tag, 'Release tag mismatch');
     assert(!release.draft, 'Only published release assets are tested by remote runners');

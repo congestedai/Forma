@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 
 // Only a compiled release asset or an explicit local candidate is installed. No private source or user model.
-const tag = process.env.FORMA_RELEASE_TAG ?? 'v0.6.3-preview.20261101';
+const tag = process.env.FORMA_RELEASE_TAG ?? 'v0.6.8-preview.20261103-rc3';
 assert(/^v\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?$/.test(tag), 'Invalid release tag');
 const root = process.env.FORMA_QA_DIR;
 assert(root && isAbsolute(root), 'FORMA_QA_DIR must name a new absolute external directory');
@@ -77,7 +77,7 @@ try {
   } else assert.match(execFileSync(process.execPath, [bin, '--help'], { encoding: 'utf8' }), /forma mcp/);
   proof.commandShimVerified = true;
   const projects = join(root, 'projects'), grant = join(projects, 'smoke'); await mkdir(grant, { recursive: true });
-  const env = { FORMA_PROJECTS_DIR: projects };
+  const env = { FORMA_PROJECTS_DIR: projects, FORMA_TEMP_DIR: join(root,'outputs'), FORMA_DATA_DIR: join(root,'profile') };
   server = start([bin, '--no-open', '--json', '--port', '5252'], env);
   let serverError = ''; server.stderr.on('data', b => { serverError = (serverError + b).slice(-2000); });
   const started = await new Promise((resolve, reject) => {
@@ -89,7 +89,7 @@ try {
   const html = Buffer.from(await (await fetch(started.origin)).arrayBuffer()), indexSha = sha(html);
   assert.equal(indexSha, sha(await readFile(join(installed, 'runtime/dist/index.html'))));
   proof.compiledEntryVerified = true;
-  bridge = start([bin, 'mcp', '--root', grant, '--port', '5252', '--index-sha256', indexSha], env);
+  bridge = start([bin, 'mcp', '--root', grant, '--port', '5252', '--index-sha256', indexSha, '--session', 'isolated', '--headless'], env);
   let stderr = '', text = '', sequence = 0; const pending = new Map();
   bridge.stderr.on('data', b => { stderr = (stderr + b).slice(-2000); });
   bridge.stdout.setEncoding('utf8'); bridge.stdout.on('data', chunk => {
@@ -124,14 +124,27 @@ try {
   await command('project_save', { name: 'solid.forma.json' });
   const solidBytes = await readFile(join(grant, 'solid.forma.json')), solid = JSON.parse(solidBytes).document;
   assert(solid.nodes.some(x => x.type === 'pad')); assert.equal(solid.bodies.length, 1);
-  await command('export', { format: '3mf', name: 'solid.3mf' });
-  assert((await stat(join(grant, 'solid.3mf'))).size > 100);
+  const modelExport = await command('export', { format: '3mf', name: 'solid.3mf' });
+  const artifactPath = result => {
+    assert.equal(result.destination, 'temporary', 'Derived files must stay separate from project documents');
+    assert(isAbsolute(result.path), 'MCP must report the actual output path');
+    const rel = relative(env.FORMA_TEMP_DIR, result.path);
+    assert(rel && !rel.startsWith('..') && !isAbsolute(rel), 'Artifact escaped the isolated output root');
+    return result.path;
+  };
+  const modelBytes = await readFile(artifactPath(modelExport));
+  assert(modelBytes.length > 100);assert.equal(modelBytes.length,modelExport.bytes);assert.equal(sha(modelBytes),modelExport.sha256);
+  assert(!existsSync(join(grant, 'solid.3mf')), 'Derived export must not pollute the project folder');
+  proof.derivedDestinationVerified = true;
   await command('project_open', { name: 'solid.forma.json' });
   await command('project_save', { name: 'reopened.forma.json' });
   assert(solidBytes.equals(await readFile(join(grant, 'reopened.forma.json'))));
   const capture = await call('tools/call', { name: 'execute', arguments: { command: 'viewport_capture', input: { name: 'smoke.png' } } });
   assert(capture.content.some(x => x.type === 'image'));
-  await writeFile(join(root, 'smoke.png'), await readFile(join(grant, 'smoke.png')));
+  const captured = capture.structuredContent;
+  const png = await readFile(artifactPath(captured));
+  assert.equal(sha(png),captured.sha256);assert.equal(png.readUInt32BE(0),0x89504e47);
+  await writeFile(join(root, 'smoke.png'), png);
   proof.nativeSvgExtrusion = true; proof.native3mf = true; proof.exactSaveReopen = true; proof.actualPng = true; proof.passed = true;
 } catch (error) { proof.error = { message: error.message.slice(0, 1800) }; process.exitCode = 1; }
 finally {

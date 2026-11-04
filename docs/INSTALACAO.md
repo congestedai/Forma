@@ -6,7 +6,7 @@
 
 Available version: **0.6.4.0**, Windows 10/11 x64, checked 2 November 2026. Use Microsoft Store to install and manage updates. The Store installation does not add the global `forma` command; MCP setup still needs the separate CLI package and its dependencies described in the [MCP guide](MCP.md).
 
-New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. GitHub now offers 0.6.8-preview.20261103-rc3. Store 0.6.4.0 is the last verified public version; its 0.6.8.0 update is prepared locally, not submitted. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
+New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. GitHub now offers 0.6.8-preview.20261103-rc3. Store 0.6.4.0 is the last verified public version; its 0.6.8.0 update was submitted on 4 November 2026 and is awaiting Microsoft certification. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
 
 ## Windows portable
 

@@ -6,7 +6,7 @@ on:
       tag:
         description: Published release or preview tag
         required: true
-        default: v0.6.3-preview.20261101
+        default: v0.6.8-preview.20261103-rc3
 
 permissions:
   contents: read
@@ -39,10 +39,11 @@ jobs:
       - name: Install public package and exercise native CAD through MCP
         env:
           FORMA_QA_DIR: ${{ runner.temp }}/forma-qa-${{ matrix.id }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/test-release.mjs
       - name: Keep bounded proof and generated example image
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: install-${{ matrix.id }}
           path: |

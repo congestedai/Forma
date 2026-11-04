@@ -1,6 +1,6 @@
 # Use Alien Forma with an MCP client
 
-Install the command-line package and start Alien Forma before connecting the bridge. See [Installation](INSTALACAO.md). Chrome or Chromium must also be installed for the bridge's isolated interaction session.
+Install the command-line package matching your desktop version. See [Installation](INSTALACAO.md). The updated Electron desktop exposes a visible native window; Chrome or Chromium is required for a separate browser interaction session.
 
 Run `forma --projects-dir` to find the projects root. Create a dedicated folder inside it and use that folder's absolute path in your client configuration:
 
@@ -28,7 +28,7 @@ Start the application using the npm command in the [installation guide](INSTALAC
       "command": "npx",
       "args": [
         "--yes",
-        "--package=https://github.com/congestedai/Forma/releases/download/v0.6.3-preview.20261101/Forma-cli.tgz",
+        "--package=https://github.com/congestedai/Forma/releases/download/v0.6.8-preview.20261103-rc3/Forma-cli.tgz",
         "forma", "mcp", "--root", "ABSOLUTE_PATH_TO_PROJECT_FOLDER"
       ]
     }
@@ -37,6 +37,16 @@ Start the application using the npm command in the [installation guide](INSTALAC
 ```
 
 Replace the last argument with the real absolute path. `~` and `$HOME` are not expanded automatically inside this JSON. The client must find Node.js/npm on PATH. npm obtains and starts the software; MCP exposes its tools to the assistant. Using this GitHub package does not require an npm account.
+
+## Visible desktop and session choice
+
+The 0.6.8 bridge defaults to `--session auto`: it looks for a free visible native window and can open the desktop app when available. The window stays open after the bridge disconnects so you can continue editing. The small MCP indicator shows activity; open it to inspect commands and saved/exported filenames.
+
+- `--session current` requires an available running window and modifies its current project. Save your work and grant only the intended project folder.
+- `--session isolated` uses a separate browser session. Chrome or Chromium is required. `--headless` is intended for CI, not live viewing.
+- `--port` selects the app instance. Keep the CLI package and application version aligned. A busy or unavailable session returns an error rather than silently replacing your work.
+
+For an already-open matching desktop, add `--session current --port 4173` to the MCP arguments above, using the actual port if different. The Store app and downloaded CLI update separately.
 
 The bridge supports capability discovery, status, execution and cancellation. Start with discovery and current status, then use returned identifiers and revisions when changing a document. Captures and inspections help verify the result. These tools do not guarantee that an AI will correctly model the intended object.
 

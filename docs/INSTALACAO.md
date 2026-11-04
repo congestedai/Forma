@@ -60,7 +60,7 @@ forma --projects-dir
 
 Ctrl+C stops the server. An occupied port is rejected to preserve an existing session. Browser and portable profiles are separate; export your theme library to transfer it. Save projects and keep an external backup before updating.
 
-Version 0.6.8 remains a preview. Windows qualification covers the final portable and CLI. [Native Linux and Mac checks of this exact package](https://github.com/congestedai/Forma/actions/runs/41769993463) are tracked separately. Do not use older release results as proof for this package. Read the release notes for limitations.
+Version 0.6.8 remains a preview. Windows qualification covers the final portable and CLI. [Checks of this exact CLI package passed on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/41769993463) with Node.js 22.12.0: installed-file integrity, command shim, compiled application, isolated browser MCP extrusion, 3MF/PNG outputs, exact save/reopen and cleanup. These are CLI/browser checks; no Mac/Linux Electron package is supplied. Read the release notes for limitations.
 
 ## Interface language
 

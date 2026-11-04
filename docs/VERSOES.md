@@ -20,7 +20,7 @@ Notes distinguish checked platforms, measured improvements and known limitations
 
 ## Current preview
 
-[0.6.8-preview.20261103-rc3](https://github.com/congestedai/Forma/releases/tag/v0.6.8-preview.20261103-rc3) consolidates recent modeling, technical drawing, packaging and visible MCP work. It corrects thin hinged-lid box defaults and paint-stroke confirmation. Launch materials use the actual F1 v20 (70 bodies, 634 nodes), an A3 general arrangement, packaging and a multicolor keychain. These are digital examples, not physical fabrication or performance certification. Technical exports retain some Portuguese labels. Windows checks identify the final portable and CLI; [native Linux/Mac results for this exact package](https://github.com/congestedai/Forma/actions/runs/41769993463) are tracked separately.
+[0.6.8-preview.20261103-rc3](https://github.com/congestedai/Forma/releases/tag/v0.6.8-preview.20261103-rc3) consolidates recent modeling, technical drawing, packaging and visible MCP work. It corrects thin hinged-lid box defaults and paint-stroke confirmation. Launch materials use the actual F1 v20 (70 bodies, 634 nodes), an A3 general arrangement, packaging and a multicolor keychain. These are digital examples, not physical fabrication or performance certification. Technical exports retain some Portuguese labels. Windows checks identify the final portable and CLI; [CLI/browser checks for this exact package passed on Linux x64, Mac Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/41769993463), using Node.js 22.12.0. No Mac/Linux Electron distribution is supplied.
 
 ## Previous previews
 

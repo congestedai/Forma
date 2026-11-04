@@ -9,10 +9,10 @@ No stable release has been published yet.
 
 | Channel | Version, updated 4 November 2026 | Download |
 | --- | --- | --- |
-| Microsoft Store, Windows x64 | **0.6.4.0**, last verified public version; **0.6.8.0 submitted, awaiting Microsoft certification** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
+| Microsoft Store, Windows x64 | **0.6.8.0 published** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
 | GitHub preview, portable and CLI | **0.6.8-preview.20261103-rc3** | [Release downloads and notes](https://github.com/congestedai/Forma/releases/tag/v0.6.8-preview.20261103-rc3) |
 
-New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. The 0.6.8.0 update was submitted on 4 November 2026; submission does not mean approval or public availability. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.
+New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. Microsoft published Store 0.6.8.0 on 4 November 2026. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.
 
 Each release includes notes, downloads and `SHA256SUMS.txt`. Current asset names are `Forma-windows-x64-portable.exe` and `Forma-cli.tgz`. The release tag identifies their version. Existing names are retained for compatibility.
 
@@ -24,6 +24,6 @@ Notes distinguish checked platforms, measured improvements and known limitations
 
 ## Previous previews
 
-[0.6.3-preview.20261101](https://github.com/congestedai/Forma/releases/tag/v0.6.3-preview.20261101) adds a compact wordmark, Windows product metadata and icon, and Microsoft Store packaging preparation. The GitHub portable remains unsigned; Store availability does not sign that separate executable. The Store edition is now available as 0.6.4.0 using the link above. [Native installation and basic CAD checks](https://github.com/congestedai/Forma/actions/runs/41343434811) passed for the GitHub 0.6.3 package on Linux x64 and both Mac architectures.
+[0.6.3-preview.20261101](https://github.com/congestedai/Forma/releases/tag/v0.6.3-preview.20261101) adds a compact wordmark, Windows product metadata and icon, and Microsoft Store packaging preparation. The GitHub portable remains unsigned; Store availability does not sign that separate executable. Historical Store release: 0.6.4.0, superseded by 0.6.8.0. [Native installation and basic CAD checks](https://github.com/congestedai/Forma/actions/runs/41343434811) passed for the GitHub 0.6.3 package on Linux x64 and both Mac architectures.
 
 [0.6.2-preview.20261101](https://github.com/congestedai/Forma/releases/tag/v0.6.2-preview.20261101) introduces eight local interface languages and automatic detection, the Alien Forma product name, and an MCP automation-language correction. 0.6.1 is superseded because its MCP browser startup can fail on non-Portuguese systems. Published assets are preserved unchanged.

@@ -10,13 +10,13 @@ This repository contains official downloads, release notes, documentation, issue
 
 | Distribution | Requirements |
 | --- | --- |
-| [Microsoft Store — 0.6.4.0](https://apps.microsoft.com/detail/9MW9G4MGBXZL) | Windows 10/11 x64. Install and manage updates through the Store. |
+| [Microsoft Store — 0.6.8.0](https://apps.microsoft.com/detail/9MW9G4MGBXZL) | Windows 10/11 x64. Install and manage updates through the Store. |
 | Windows x64 portable | Run the executable; Node.js is not required. Preserve the adjacent `Forma-data` folder when updating. |
 | Command-line package (.tgz) | Node.js 22.12 or newer; includes the compiled browser application and MCP bridge. |
 
 Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). The current [0.6.8 desktop preview](https://github.com/congestedai/Forma/releases/tag/v0.6.8-preview.20261103-rc3) includes modeling, drawing, packaging and visible MCP improvements. Windows checks cover the final portable/CLI, persistence, native part tools, packaging poses and exports, paint confirmation, and the complete F1 project. [Linux x64, macOS Intel and macOS Apple Silicon checks passed](https://github.com/congestedai/Forma/actions/runs/41769993463) with Node.js 22.12.0: exact published CLI hash, 134 installed files, command shim, compiled app, isolated browser MCP extrusion, separate 3MF/PNG outputs, exact save/reopen and cleanup. This checks CLI/browser flows, not a Mac/Linux Electron distribution. These are preview checks, not validation of every tool or a performance guarantee.
 
-**Release channels, updated 4 November 2026:** GitHub **0.6.8-preview.20261103-rc3**; Microsoft Store **0.6.4.0 is the last verified public version**. The **0.6.8.0 Store update has been submitted and is awaiting Microsoft certification**. New previews arrive on **GitHub first**; Store updates follow Microsoft's review. Read the [channel guide](docs/VERSOES.md) before choosing a download.
+**Release channels, updated 4 November 2026:** GitHub **0.6.8-preview.20261103-rc3**; Microsoft Store **0.6.8.0 published**. New previews arrive on **GitHub first**; Store updates follow Microsoft's review. Read the [channel guide](docs/VERSOES.md) before choosing a download.
 
 ![F1 v20 in the actual Alien Forma viewport](docs/assets/f1-v20-hero.png)
 
@@ -25,6 +25,10 @@ Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com
 The F1 v20 study contains **70 bodies and 634 history nodes**, with image-derived markings, hardware details and technical views. Its A3 general arrangement uses third-angle projection, orthographic views at 1:2 and an isometric view at 1:5. [View the drawing PDF](docs/assets/f1-v20-general-arrangement.pdf) or [explore the screenshots](https://congestedai.github.io/Forma/#drawings). The native export retains some Portuguese labels. This is a CAD design example, not a physically validated RC-car kit or complete fabrication documentation.
 
 Additional examples demonstrate foldable 3D boxes, rigid boxes with separate lids, foldable laser plans with distinct vector cut/score lines, and an image-derived three-color keychain. Assembled packaging poses are digital previews; material settings and hinge durability need physical testing.
+
+![One kraft folding mailer, flat and assembled](docs/assets/packaging-kraft.png)
+
+Kraft packaging: AI-finished presentation based on a real native Alien Forma capture. The [original viewport image](docs/assets/packaging-kraft-viewport.png) is also available. This is a digital design example, not a physically validated carton.
 
 The current releases are **previews**. No stable release has been published yet. Read the release notes for known limitations.
 

@@ -20,7 +20,7 @@ Notes distinguish checked platforms, measured improvements and known limitations
 
 ## Current preview
 
-[0.6.9-preview.20261106](https://github.com/congestedai/Forma/releases/tag/v0.6.9-preview.20261106) adds lighting and material controls, MCP raster tracing, SVG positioning, Sketch reference calibration, Pocket limits, three-point arcs and 3MF inspection. Windows x64 passed portable and CLI smoke tests. Linux x64 and both macOS architectures are being checked against this exact CLI.
+[0.6.9-preview.20261106](https://github.com/congestedai/Forma/releases/tag/v0.6.9-preview.20261106) adds lighting and material controls, MCP raster tracing, SVG positioning, Sketch reference calibration, Pocket limits, three-point arcs and 3MF inspection. Windows x64 passed portable and CLI smoke tests. [Linux x64 and both macOS architectures passed CLI and browser smoke tests for this exact download](https://github.com/congestedai/Forma/actions/runs/42278917809).
 
 ## Previous previews
 

@@ -9,7 +9,7 @@ No stable release has been published yet.
 
 | Channel | Version, updated 6 November 2026 | Download |
 | --- | --- | --- |
-| Microsoft Store, Windows x64 | **0.6.8.0 published** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
+| Microsoft Store, Windows x64 | **0.6.8.0 available** · **0.6.9.0 in certification** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
 | GitHub preview, portable and CLI | **0.6.9-preview.20261106** | [Release downloads and notes](https://github.com/congestedai/Forma/releases/tag/v0.6.9-preview.20261106) |
 
 New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. Microsoft published Store 0.6.8.0 on 4 November 2026. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.

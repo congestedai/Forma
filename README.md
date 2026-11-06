@@ -16,7 +16,7 @@ This repository contains official downloads, release notes, documentation, issue
 
 Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). [Alien Forma 0.6.9 Preview](https://github.com/congestedai/Forma/releases/tag/v0.6.9-preview.20261106) adds MCP raster tracing, world-space modeling receipts, Sketch image calibration, 3MF inspection and four-mode viewport captures. Windows x64 passed the portable and CLI smoke tests. [CLI and browser smoke tests for this exact download passed on Linux x64, Mac Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42278917809).
 
-**Release channels, updated 6 November 2026:** GitHub **0.6.9-preview.20261106**; Microsoft Store **0.6.8.0 published**. New previews arrive on **GitHub first**; Store updates follow Microsoft's review. Read the [channel guide](docs/VERSOES.md) before choosing a download.
+**Release channels, updated 6 November 2026:** GitHub **0.6.9-preview.20261106**; Microsoft Store **0.6.8.0 available**, with **0.6.9.0 in certification**. New previews arrive on **GitHub first**; Store updates follow Microsoft's review. Read the [channel guide](docs/VERSOES.md) before choosing a download.
 
 ![F1 v20 in the actual Alien Forma viewport](docs/assets/f1-v20-hero.png)
 

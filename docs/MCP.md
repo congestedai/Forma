@@ -28,7 +28,7 @@ Start the application using the npm command in the [installation guide](INSTALAC
       "command": "npx",
       "args": [
         "--yes",
-        "--package=https://github.com/congestedai/Forma/releases/download/v0.6.8-preview.20261103-rc3/Forma-cli.tgz",
+        "--package=https://github.com/congestedai/Forma/releases/download/v0.6.9-preview.20261106/Forma-cli.tgz",
         "forma", "mcp", "--root", "ABSOLUTE_PATH_TO_PROJECT_FOLDER"
       ]
     }
@@ -40,7 +40,7 @@ Replace the last argument with the real absolute path. `~` and `$HOME` are not e
 
 ## Visible desktop and session choice
 
-The 0.6.8 bridge defaults to `--session auto`: it looks for a free visible native window and can open the desktop app when available. The window stays open after the bridge disconnects so you can continue editing. The small MCP indicator shows activity; open it to inspect commands and saved/exported filenames.
+The bridge defaults to `--session auto`: it looks for a free visible native window and can open the desktop app when available. The window stays open after the bridge disconnects so you can continue editing. The small MCP indicator shows activity; open it to inspect commands and saved/exported filenames.
 
 - `--session current` requires an available running window and modifies its current project. Save your work and grant only the intended project folder.
 - `--session isolated` uses a separate browser session. Chrome or Chromium is required. `--headless` is intended for CI, not live viewing.

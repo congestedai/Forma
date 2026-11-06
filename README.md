@@ -14,9 +14,9 @@ This repository contains official downloads, release notes, documentation, issue
 | Windows x64 portable | Run the executable; Node.js is not required. Preserve the adjacent `Forma-data` folder when updating. |
 | Command-line package (.tgz) | Node.js 22.12 or newer; includes the compiled browser application and MCP bridge. |
 
-Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). The current [0.6.8 desktop preview](https://github.com/congestedai/Forma/releases/tag/v0.6.8-preview.20261103-rc3) includes modeling, drawing, packaging and visible MCP improvements. Windows checks cover the final portable/CLI, persistence, native part tools, packaging poses and exports, paint confirmation, and the complete F1 project. [Linux x64, macOS Intel and macOS Apple Silicon checks passed](https://github.com/congestedai/Forma/actions/runs/41769993463) with Node.js 22.12.0: exact published CLI hash, 134 installed files, command shim, compiled app, isolated browser MCP extrusion, separate 3MF/PNG outputs, exact save/reopen and cleanup. This checks CLI/browser flows, not a Mac/Linux Electron distribution. These are preview checks, not validation of every tool or a performance guarantee.
+Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). [Alien Forma 0.6.9 Preview](https://github.com/congestedai/Forma/releases/tag/v0.6.9-preview.20261106) adds MCP raster tracing, world-space modeling receipts, Sketch image calibration, 3MF inspection and four-mode viewport captures. Windows x64 passed the portable and CLI smoke tests. Linux and macOS verification for this exact download is in progress.
 
-**Release channels, updated 4 November 2026:** GitHub **0.6.8-preview.20261103-rc3**; Microsoft Store **0.6.8.0 published**. New previews arrive on **GitHub first**; Store updates follow Microsoft's review. Read the [channel guide](docs/VERSOES.md) before choosing a download.
+**Release channels, updated 6 November 2026:** GitHub **0.6.9-preview.20261106**; Microsoft Store **0.6.8.0 published**. New previews arrive on **GitHub first**; Store updates follow Microsoft's review. Read the [channel guide](docs/VERSOES.md) before choosing a download.
 
 ![F1 v20 in the actual Alien Forma viewport](docs/assets/f1-v20-hero.png)
 

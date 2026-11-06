@@ -4,9 +4,9 @@
 
 [Download Alien Forma from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL).
 
-Available version: **0.6.8.0**, Windows 10/11 x64, checked 4 November 2026. Use Microsoft Store to install and manage updates. The Store installation does not add the global `forma` command; MCP setup still needs the separate CLI package and its dependencies described in the [MCP guide](MCP.md).
+Available version: **0.6.9.0**, Windows 10/11 x64. Use Microsoft Store to install and manage updates. The Store installation does not add the global `forma` command; MCP setup still needs the separate CLI package and its dependencies described in the [MCP guide](MCP.md).
 
-New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. GitHub offers 0.6.9-preview.20261106 and Microsoft Store has published 0.6.8.0. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
+New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. GitHub offers 0.6.9-preview.20261106 and Microsoft Store offers 0.6.9.0. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
 
 ## Windows portable
 

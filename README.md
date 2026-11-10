@@ -8,6 +8,8 @@ This repository contains official downloads, release notes, documentation, issue
 
 ## Downloads
 
+Animation is experimental. For now, the most practical way to set up motion is with an AI agent connected through MCP. We are improving manual setup in the interface to make it simpler and more intuitive.
+
 | Distribution | Requirements |
 | --- | --- |
 | [Microsoft Store — 0.6.9.0](https://apps.microsoft.com/detail/9MW9G4MGBXZL) | Windows 10/11 x64. Install and manage updates through the Store. |

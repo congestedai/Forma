@@ -43,6 +43,8 @@ h1 { font-size: clamp(56px, 5.4vw, 78px); line-height: 1.03; letter-spacing: -.0
 .eyebrow { font: 10px/1.6 Consolas, monospace; letter-spacing: .13em; color: var(--accent); margin-bottom: 13px; }
 h2 { font-size: clamp(30px, 3vw, 43px); line-height: 1.1; letter-spacing: -.045em; font-weight: 600; }
 .section-top { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 26px; }
+.animation-status { margin: 0 0 24px; padding: 14px 18px; border-left: 3px solid #1763ce; background: #e9f1fb; color: #344f66; font-size: 14px; line-height: 1.65; }
+.animation-status strong { color: #142d42; }
 .demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 button { appearance: none; border: 0; padding: 10px 15px; background: transparent; color: #36534f; font: 600 12px "Segoe UI", sans-serif; cursor: pointer; border-radius: 2px; }
 button[aria-pressed=true] { background: #123b39; color: white; }

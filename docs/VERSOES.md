@@ -20,6 +20,8 @@ Notes distinguish checked platforms, measured improvements and known limitations
 
 ## Current preview
 
+Animation is experimental. For now, the most practical way to set up motion is with an AI agent connected through MCP. We are improving manual setup in the interface to make it simpler and more intuitive.
+
 [0.7.0-preview.rc7](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7) introduces Animation, coordinated joints, per-joint keyframes, partial poses, visual deformation and sampled distance inspection. It improves camera/selection control, MCP connection feedback, complex assembly editing/opening, captures and project operations. Exact Windows portable and CLI checks passed. [This exact CLI passed native installation and basic CAD/MCP checks on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567). Structural solver components are not included in public downloads. [Update and imagery](https://congestedai.github.io/Forma/updates/0.7.0.html).
 
 ## Previous previews

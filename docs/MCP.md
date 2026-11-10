@@ -58,4 +58,6 @@ Starting with 0.6.2, the disposable browser used by the MCP bridge has a fixed P
 
 ## 0.7.0 workflow improvements
 
+Animation is experimental. For now, the most practical way to set up motion is with an AI agent connected through MCP. We are improving manual setup in the interface to make it simpler and more intuitive.
+
 The Animation workspace and MCP support partial joint poses, per-joint keyframes, PNG/GIF sequences and sampled inspection batches. User and agent cameras are independent; edit control can be handed back explicitly. Connection feedback is steadier, and batch edits support Undo. Surface evidence and inconclusive results remain distinct. Structural analysis requires external supported solver components, not bundled in public packages. Isolated English sessions can still have workspace-selector limitations.

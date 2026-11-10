@@ -60,7 +60,7 @@ forma --projects-dir
 
 Ctrl+C stops the server. An occupied port is rejected to preserve an existing session. Browser and portable profiles are separate; export your theme library to transfer it. Save projects and keep an external backup before updating.
 
-Version 0.7.0 is a preview. Exact Windows x64 portable and CLI installation checks passed. Native Linux/macOS checks for this exact archive are pending; earlier 0.6.9 results do not qualify 0.7.0. The CLI runs Alien Forma in a compatible browser. Read the release notes for limitations.
+Version 0.7.0 is a preview. Exact Windows x64 portable and CLI installation checks passed. [The exact 0.7.0 CLI passed installation, MCP modeling, capture, export and save/reopen on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567). These are basic workflow checks, not certification of every tool or desktop. The CLI runs Alien Forma in a compatible browser. Read the release notes for limitations.
 
 ## Interface language
 

@@ -16,7 +16,7 @@ This repository contains official downloads, release notes, documentation, issue
 
 Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). **[Alien Forma 0.7.0 Preview — Assemblies in motion](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7)** adds a dedicated Animation workspace, joint keyframes, coordinated poses, sampled inspection and a more direct MCP workflow. It also improves complex-assembly opening/editing, camera and selection control, motion captures and everyday project operations.
 
-**Release channels, 9 November 2026:** GitHub **0.7.0-preview.rc7**; Microsoft Store **0.6.9.0**, with **0.7.0.0 being prepared for separate certification**. Check [versions and channels](docs/VERSOES.md). Windows x64 portable and exact CLI installation checks passed. Native Linux/macOS checks for this exact archive are pending.
+**Release channels, 9 November 2026:** GitHub **0.7.0-preview.rc7**; Microsoft Store **0.6.9.0**, with **0.7.0.0 being prepared for separate certification**. Check [versions and channels](docs/VERSOES.md). Windows x64 portable and exact CLI installation checks passed. [Installation and basic MCP modeling/capture/export/save-reopen checks for this exact CLI passed on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567).
 
 ![Robotic arm in the actual Alien Forma viewport](docs/assets/robot-arm-hero.png)
 

@@ -60,7 +60,7 @@ try {
     packageBytes = await download(asset);
     assert.equal(`sha256:${sha(packageBytes)}`, asset.digest);
     const sums = (await download(release.assets.find(x => x.name === 'SHA256SUMS.txt'))).toString('utf8');
-    assert(sums.split('\n').includes(`${sha(packageBytes)}  Forma-cli.tgz`));
+    assert(sums.split(/\r?\n/).includes(`${sha(packageBytes)}  Forma-cli.tgz`));
     proof.source = 'published-release';
   }
   const tarball = join(root, 'Forma-cli.tgz'); await writeFile(tarball, packageBytes, { flag: 'wx' });

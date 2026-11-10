@@ -1,6 +1,6 @@
-# Alien Forma
+# Alien Forma — parametric CAD with AI tools through MCP
 
-Parametric CAD by **CongestedAI**, with local modeling, painting and texturing tools, plus MCP integration for compatible AI assistants. “Forma” is the application's short name.
+**Alien Forma** is parametric CAD by **CongestedAI**, with local modeling, painting and texturing tools, plus MCP integration for compatible AI assistants. “Forma” is the application's short name. Free for personal, non-commercial use; commercial use follows the [terms](LICENSE.txt).
 
 **[Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) · [Official website](https://congestedai.github.io/Forma/) · [GitHub downloads](https://github.com/congestedai/Forma/releases) · [Install with a command](docs/INSTALACAO.md#macos-and-linux-command-line) · [Installation](docs/INSTALACAO.md) · [MCP](docs/MCP.md) · [Themes](docs/TEMAS.md)**
 

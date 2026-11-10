@@ -2,17 +2,17 @@
 
 ## Quick connection
 
-Open Alien Forma, open its MCP panel and copy the connection instructions. Use the port shown in that window. Start one persistent stdio connection for the task, then request model_guide topic=workflow and model_read. After registering a new server, start a new client session so its tools can load.
+Open Alien Forma, open its MCP panel and copy the connection instructions. Use the port shown in that window. Discover execute (possibly namespaced), request model_guide topic=workflow and model_read, and continue when both succeed. Registration is persistent: do not register again for each task or agent. If tools are absent, check MCP controls, refresh once if supported, and retry discovery; request a new session only if tools remain absent. The terminal /mcp dialog is not a command for Desktop Code chat. Connected alone does not prove that this conversation has native tools. Keep one stdio connection alive throughout the task. Auto mode uses an available Forma window or opens the app when a CAD command needs it, so app/conversation opening order does not matter after registration. On handoff, save and report the returned project path and document/revision/state; the next agent reads the existing document or opens that saved copy before editing.
 
 ## Windows — Microsoft Store
 
-Store package **0.7.3.0** (submitted for certification) includes the forma.exe execution alias and its own Node runtime. It needs neither npm nor an external Node.js installation. Older Store packages still require the separate CLI. After installing the update, open a new terminal and generate the client configuration:
+Store package **0.7.3.0 or later** includes the forma.exe execution alias and its own Node runtime. It needs neither npm nor an external Node.js installation. Older Store packages still require the separate CLI. After installing the update, open a new terminal and generate the client configuration:
 
 ~~~powershell
 forma mcp --print-config claude --port 4173
 ~~~
 
-Replace 4173 with the port shown by the app. The generated Store configuration uses Windows PowerShell to locate the installed package and forward UTF-8 stdio to embedded Node, without opening a second GUI. Register that configuration in your MCP client and start a new session.
+Replace 4173 with the port shown by the app. The generated Store configuration uses Windows PowerShell to locate the installed package and forward UTF-8 stdio to embedded Node, without opening a second GUI. Register only if missing, then check native tool discovery. In Desktop Code use the MCP controls; in the terminal use /mcp. If a previously opened conversation still exposes no Forma tool after refresh, a new session may be required by that client.
 
 ## Portable, macOS and Linux
 

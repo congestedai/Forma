@@ -9,10 +9,10 @@ No stable release has been published yet.
 
 | Channel | Version, updated 10 November 2026 | Download |
 | --- | --- | --- |
-| Microsoft Store, Windows x64 | **0.7.1.0 available; 0.7.3.0 submitted** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
-| GitHub preview, portable and CLI | **0.7.3 maintenance build** | [Release downloads and notes](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7) |
+| Microsoft Store, Windows x64 | **0.7.3.0 available; 0.7.4.0 submitted** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
+| GitHub preview, portable and CLI | **0.7.4 maintenance build** | [Release downloads and notes](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7) |
 
-New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. Microsoft Store currently offers 0.7.1.0; the 0.7.3 update uses Store package 0.7.3.0 and has been submitted for separate certification. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.
+New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. Microsoft Store currently offers 0.7.3.0; the 0.7.4 update uses Store package 0.7.4.0 and has been submitted for separate certification. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.
 
 Each release includes notes, downloads and `SHA256SUMS.txt`. Current asset names are `Forma-windows-x64-portable.exe` and `Forma-cli.tgz`. The existing 0.7 release tag and download URLs are retained for maintenance updates; installed metadata and SHA256SUMS identify the exact build. Existing names are retained for compatibility.
 

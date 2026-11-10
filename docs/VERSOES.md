@@ -7,14 +7,14 @@ No stable release has been published yet.
 
 ## Microsoft Store and GitHub
 
-| Channel | Version, updated 9 November 2026 | Download |
+| Channel | Version, updated 10 November 2026 | Download |
 | --- | --- | --- |
-| Microsoft Store, Windows x64 | **0.6.9.0 available** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
-| GitHub preview, portable and CLI | **0.7.0-preview.rc7** | [Release downloads and notes](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7) |
+| Microsoft Store, Windows x64 | **0.7.1.0 available; 0.7.3.0 submitted** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
+| GitHub preview, portable and CLI | **0.7.3 maintenance build** | [Release downloads and notes](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7) |
 
-New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. Microsoft Store currently offers 0.6.9.0; 0.7.0.0 has been submitted for separate certification. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.
+New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. Microsoft Store currently offers 0.7.1.0; the 0.7.3 update uses Store package 0.7.3.0 and has been submitted for separate certification. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.
 
-Each release includes notes, downloads and `SHA256SUMS.txt`. Current asset names are `Forma-windows-x64-portable.exe` and `Forma-cli.tgz`. The release tag identifies their version. Existing names are retained for compatibility.
+Each release includes notes, downloads and `SHA256SUMS.txt`. Current asset names are `Forma-windows-x64-portable.exe` and `Forma-cli.tgz`. The existing 0.7 release tag and download URLs are retained for maintenance updates; installed metadata and SHA256SUMS identify the exact build. Existing names are retained for compatibility.
 
 Notes distinguish checked platforms, measured improvements and known limitations. Performance targets and universal compatibility are not claimed without supporting evidence. The original application source and development history are private.
 
@@ -22,7 +22,7 @@ Notes distinguish checked platforms, measured improvements and known limitations
 
 Animation is experimental. For now, the most practical way to set up motion is with an AI agent connected through MCP. We are improving manual setup in the interface to make it simpler and more intuitive.
 
-[0.7.0-preview.rc7](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7) introduces Animation, coordinated joints, per-joint keyframes, partial poses, visual deformation and sampled distance inspection. It improves camera/selection control, MCP connection feedback, complex assembly editing/opening, captures and project operations. Exact Windows portable and CLI checks passed. [This exact CLI passed native installation and basic CAD/MCP checks on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567). Structural solver components are not included in public downloads. [Update and imagery](https://congestedai.github.io/Forma/updates/0.7.0.html).
+[0.7.0-preview.rc7](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7) introduces Animation, coordinated joints, per-joint keyframes, partial poses, visual deformation and sampled distance inspection. It improves camera/selection control, MCP connection feedback, complex assembly editing/opening, captures and project operations. Exact Windows portable and CLI checks passed. [The original 0.7.0 CLI passed native installation and basic CAD/MCP checks on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567). Structural solver components are not included in public downloads. [Update and imagery](https://congestedai.github.io/Forma/updates/0.7.0.html).
 
 ## Previous previews
 

@@ -1,42 +1,35 @@
 # Use Alien Forma with an MCP client
 
-Install the command-line package matching your desktop version. See [Installation](INSTALACAO.md). The updated Electron desktop exposes a visible native window; Chrome or Chromium is required for a separate browser interaction session.
+## Quick connection
 
-Run `forma --projects-dir` to find the projects root. Create a dedicated folder inside it and use that folder's absolute path in your client configuration:
+Open Alien Forma, open its MCP panel and copy the connection instructions. Use the port shown in that window. Start one persistent stdio connection for the task, then request model_guide topic=workflow and model_read. After registering a new server, start a new client session so its tools can load.
 
-```json
-{
-  "mcpServers": {
-    "forma": {
-      "command": "forma",
-      "args": ["mcp", "--root", "ABSOLUTE_PATH_TO_PROJECT_FOLDER"]
-    }
-  }
-}
-```
+## Windows — Microsoft Store
 
-Some Windows clients require `forma.cmd` in the `command` field. The default root is `~/Forma/Projetos`; `FORMA_PROJECTS_DIR` can set another absolute external root. The bridge requires an existing subfolder of that root and rejects links and overwrites. Use a folder dedicated to the current project.
+Store package **0.7.3.0** (submitted for certification) includes the forma.exe execution alias and its own Node runtime. It needs neither npm nor an external Node.js installation. Older Store packages still require the separate CLI. After installing the update, open a new terminal and generate the client configuration:
 
-## macOS/Linux setup without a global installation
+~~~powershell
+forma mcp --print-config claude --port 4173
+~~~
 
-Start the application using the npm command in the [installation guide](INSTALACAO.md#macos-and-linux-command-line). Create a project folder, for example `mkdir -p "$HOME/Forma/Projetos/AI"`, then configure your MCP client:
+Replace 4173 with the port shown by the app. The generated Store configuration uses Windows PowerShell to locate the installed package and forward UTF-8 stdio to embedded Node, without opening a second GUI. Register that configuration in your MCP client and start a new session.
 
-```json
+## Portable, macOS and Linux
+
+Install the command-line package matching your desktop build; see [Installation](INSTALACAO.md). The separate CLI package needs Node.js 22.12 or newer. It can also run without a global install:
+
+~~~json
 {
   "mcpServers": {
     "forma": {
       "command": "npx",
-      "args": [
-        "--yes",
-        "--package=https://github.com/congestedai/Forma/releases/download/v0.7.0-preview.rc7/Forma-cli.tgz",
-        "forma", "mcp", "--root", "ABSOLUTE_PATH_TO_PROJECT_FOLDER"
-      ]
+      "args": ["--yes", "--package=https://github.com/congestedai/Forma/releases/download/v0.7.0-preview.rc7/Forma-cli.tgz", "forma", "mcp", "--port", "4173"]
     }
   }
 }
-```
+~~~
 
-Replace the last argument with the real absolute path. `~` and `$HOME` are not expanded automatically inside this JSON. The client must find Node.js/npm on PATH. npm obtains and starts the software; MCP exposes its tools to the assistant. Using this GitHub package does not require an npm account.
+No --root is required. Choose the save/export directory for each operation; ask the user where to save, with the system Desktop as the fallback. An explicit --root only changes the default directory. Keep the original project intact and save modifications as a new copy.
 
 ## Visible desktop and session choice
 

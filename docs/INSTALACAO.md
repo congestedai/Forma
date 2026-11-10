@@ -4,9 +4,9 @@
 
 [Download Alien Forma from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL).
 
-Available version: **0.6.9.0**, Windows 10/11 x64. Use Microsoft Store to install and manage updates. The Store installation does not add the global `forma` command; MCP setup still needs the separate CLI package and its dependencies described in the [MCP guide](MCP.md).
+Available version: **0.7.1.0**; **0.7.3.0 submitted for certification**. Use Microsoft Store to install and manage updates. Store package 0.7.3.0 adds the `forma.exe` execution alias and uses its embedded Node runtime for MCP; a separate Node.js/npm installation is not needed for this Store connection. See the [MCP guide](MCP.md).
 
-New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. GitHub offers 0.7.0-preview.rc7; Microsoft Store currently offers 0.6.9.0 while 0.7.0.0 is under separate certification. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
+New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. The existing 0.7 GitHub release now contains maintenance build 0.7.3; Microsoft Store offers 0.7.1.0 while 0.7.3.0 is under separate certification. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
 
 ## Windows portable
 
@@ -60,7 +60,7 @@ forma --projects-dir
 
 Ctrl+C stops the server. An occupied port is rejected to preserve an existing session. Browser and portable profiles are separate; export your theme library to transfer it. Save projects and keep an external backup before updating.
 
-Version 0.7.0 is a preview. Exact Windows x64 portable and CLI installation checks passed. [The exact 0.7.0 CLI passed installation, MCP modeling, capture, export and save/reopen on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567). These are basic workflow checks, not certification of every tool or desktop. The CLI runs Alien Forma in a compatible browser. Read the release notes for limitations.
+Version 0.7.3 is a maintenance build in the existing preview channel. Its Windows portable and embedded-Node MCP connection passed targeted package checks. [The exact 0.7.0 CLI passed installation, MCP modeling, capture, export and save/reopen on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567). These are basic workflow checks, not certification of every tool or desktop. The CLI runs Alien Forma in a compatible browser. Read the release notes for limitations.
 
 ## Interface language
 

@@ -12,13 +12,13 @@ Animation is experimental. For now, the most practical way to set up motion is w
 
 | Distribution | Requirements |
 | --- | --- |
-| [Microsoft Store — 0.6.9.0](https://apps.microsoft.com/detail/9MW9G4MGBXZL) | Windows 10/11 x64. Install and manage updates through the Store. |
+| [Microsoft Store — 0.7.1.0](https://apps.microsoft.com/detail/9MW9G4MGBXZL) | Windows 10/11 x64. Install and manage updates through the Store. |
 | Windows x64 portable | Run the executable; Node.js is not required. Preserve the adjacent `Forma-data` folder when updating. |
 | Command-line package (.tgz) | Node.js 22.12 or newer; includes the compiled browser application and MCP bridge. |
 
 Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). **[Alien Forma 0.7.0 Preview — Assemblies in motion](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7)** adds a dedicated Animation workspace, joint keyframes, coordinated poses, sampled inspection and a more direct MCP workflow. It also improves complex-assembly opening/editing, camera and selection control, motion captures and everyday project operations.
 
-**Release channels, 9 November 2026:** GitHub **0.7.0-preview.rc7**; Microsoft Store **0.6.9.0**, with **0.7.0.0 submitted for separate certification**. Check [versions and channels](docs/VERSOES.md). Windows x64 portable and exact CLI installation checks passed. [Installation and basic MCP modeling/capture/export/save-reopen checks for this exact CLI passed on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567).
+**Maintenance build, 10 November 2026:** GitHub **0.7.3** in the existing 0.7 release; Microsoft Store **0.7.1.0 available**, with **0.7.3.0 submitted for separate certification**. This patch fixes Store MCP setup without an external Node.js installation. Check [versions and channels](docs/VERSOES.md). Windows x64 portable and embedded-Node MCP checks passed for 0.7.3. [The original 0.7.0 CLI installation and basic MCP modeling/capture/export/save-reopen checks passed on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567).
 
 ![Robotic arm in the actual Alien Forma viewport](docs/assets/robot-arm-hero.png)
 

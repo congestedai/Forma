@@ -12,7 +12,7 @@ No stable release has been published yet.
 | Microsoft Store, Windows x64 | **0.6.9.0 available** | [Install from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) |
 | GitHub preview, portable and CLI | **0.7.0-preview.rc7** | [Release downloads and notes](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7) |
 
-New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. Microsoft Store currently offers 0.6.9.0; 0.7.0.0 is being prepared for separate certification. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.
+New previews arrive on **GitHub first**; Store updates follow Microsoft's review and may arrive later. Microsoft Store currently offers 0.6.9.0; 0.7.0.0 has been submitted for separate certification. Compare version numbers rather than assuming either channel is always newer. Store availability does not certify every CAD tool or establish a new Stable channel.
 
 Each release includes notes, downloads and `SHA256SUMS.txt`. Current asset names are `Forma-windows-x64-portable.exe` and `Forma-cli.tgz`. The release tag identifies their version. Existing names are retained for compatibility.
 

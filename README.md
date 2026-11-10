@@ -14,13 +14,19 @@ This repository contains official downloads, release notes, documentation, issue
 | Windows x64 portable | Run the executable; Node.js is not required. Preserve the adjacent `Forma-data` folder when updating. |
 | Command-line package (.tgz) | Node.js 22.12 or newer; includes the compiled browser application and MCP bridge. |
 
-Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). [Alien Forma 0.6.9 Preview](https://github.com/congestedai/Forma/releases/tag/v0.6.9-preview.20261106) adds MCP raster tracing, world-space modeling receipts, Sketch image calibration, 3MF inspection and four-mode viewport captures. Windows x64 passed the portable and CLI smoke tests. [CLI and browser smoke tests for this exact download passed on Linux x64, Mac Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42278917809).
+Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). **[Alien Forma 0.7.0 Preview — Assemblies in motion](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7)** adds a dedicated Animation workspace, joint keyframes, coordinated poses, sampled inspection and a more direct MCP workflow. It also improves complex-assembly opening/editing, camera and selection control, motion captures and everyday project operations.
 
-**Release channels, updated 6 November 2026:** GitHub **0.6.9-preview.20261106**; Microsoft Store **0.6.9.0**. New previews arrive on **GitHub first**; Store updates follow Microsoft's review. Read the [channel guide](docs/VERSOES.md) before choosing a download.
+**Release channels, 9 November 2026:** GitHub **0.7.0-preview.rc7**; Microsoft Store **0.6.9.0**, with **0.7.0.0 being prepared for separate certification**. Check [versions and channels](docs/VERSOES.md). Windows x64 portable and exact CLI installation checks passed. Native Linux/macOS checks for this exact archive are pending.
 
-![F1 v20 in the actual Alien Forma viewport](docs/assets/f1-v20-hero.png)
+![Robotic arm in the actual Alien Forma viewport](docs/assets/robot-arm-hero.png)
 
-## Made in the application
+![Square near the floor followed by a raised circle](docs/assets/robot-arm-square-circle-loop.gif)
+
+[Explore 0.7.0](https://congestedai.github.io/Forma/updates/0.7.0.html) · [Technical drawing PDF](docs/assets/robot-arm-general-arrangement.pdf)
+
+The motion overlay is a presentation annotation. The arm and drawing are digital design studies, not physically certified mechanisms or complete fabrication instructions. Structural analysis is experimental and requires external supported solver components; these are not bundled in the public downloads. Native sheets retain some Portuguese labels.
+
+## Earlier design examples
 
 The F1 v20 study contains **70 bodies and 634 history nodes**, with image-derived markings, hardware details and technical views. Its A3 general arrangement uses third-angle projection, orthographic views at 1:2 and an isometric view at 1:5. [View the drawing PDF](docs/assets/f1-v20-general-arrangement.pdf) or [explore the screenshots](https://congestedai.github.io/Forma/#drawings). The native export retains some Portuguese labels. This is a CAD design example, not a physically validated RC-car kit or complete fabrication documentation.
 

@@ -28,7 +28,7 @@ Start the application using the npm command in the [installation guide](INSTALAC
       "command": "npx",
       "args": [
         "--yes",
-        "--package=https://github.com/congestedai/Forma/releases/download/v0.6.9-preview.20261106/Forma-cli.tgz",
+        "--package=https://github.com/congestedai/Forma/releases/download/v0.7.0-preview.rc7/Forma-cli.tgz",
         "forma", "mcp", "--root", "ABSOLUTE_PATH_TO_PROJECT_FOLDER"
       ]
     }
@@ -55,3 +55,7 @@ The protocol is not exclusive to any provider or model. Connection support and r
 ## Automation language
 
 Starting with 0.6.2, the disposable browser used by the MCP bridge has a fixed Portuguese automation language so its existing public-control selectors remain consistent on all host languages. This does not change the language or saved preferences in your normal application profile. Captures from the isolated MCP session therefore show its automation language.
+
+## 0.7.0 workflow improvements
+
+The Animation workspace and MCP support partial joint poses, per-joint keyframes, PNG/GIF sequences and sampled inspection batches. User and agent cameras are independent; edit control can be handed back explicitly. Connection feedback is steadier, and batch edits support Undo. Surface evidence and inconclusive results remain distinct. Structural analysis requires external supported solver components, not bundled in public packages. Isolated English sessions can still have workspace-selector limitations.

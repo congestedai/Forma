@@ -6,7 +6,7 @@
 
 Available version: **0.6.9.0**, Windows 10/11 x64. Use Microsoft Store to install and manage updates. The Store installation does not add the global `forma` command; MCP setup still needs the separate CLI package and its dependencies described in the [MCP guide](MCP.md).
 
-New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. GitHub offers 0.6.9-preview.20261106 and Microsoft Store offers 0.6.9.0. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
+New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. GitHub offers 0.7.0-preview.rc7; Microsoft Store currently offers 0.6.9.0 while 0.7.0.0 is prepared for separate certification. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
 
 ## Windows portable
 
@@ -25,7 +25,7 @@ Get-FileHash .\Forma-windows-x64-portable.exe -Algorithm SHA256
 With Node.js 22.12 or newer and npm installed, start this release without an npm account:
 
 ```sh
-npm exec --yes --package=https://github.com/congestedai/Forma/releases/download/v0.6.9-preview.20261106/Forma-cli.tgz -- forma
+npm exec --yes --package=https://github.com/congestedai/Forma/releases/download/v0.7.0-preview.rc7/Forma-cli.tgz -- forma
 ```
 
 This downloads the compiled application and opens it in your default browser. Keep the terminal open while using Alien Forma; Ctrl+C stops the server. Add `--no-open` after `forma` to start without opening a browser automatically.
@@ -35,7 +35,7 @@ An AI assistant with permission to install and start local software can also run
 To keep the command installed for your user, without `sudo`:
 
 ```sh
-npm install --global --prefix "$HOME/.local" https://github.com/congestedai/Forma/releases/download/v0.6.9-preview.20261106/Forma-cli.tgz
+npm install --global --prefix "$HOME/.local" https://github.com/congestedai/Forma/releases/download/v0.7.0-preview.rc7/Forma-cli.tgz
 "$HOME/.local/bin/forma"
 ```
 
@@ -60,7 +60,7 @@ forma --projects-dir
 
 Ctrl+C stops the server. An occupied port is rejected to preserve an existing session. Browser and portable profiles are separate; export your theme library to transfer it. Save projects and keep an external backup before updating.
 
-Version 0.6.9 is a preview. Windows x64 passed the portable and CLI smoke tests. [This exact CLI passed installation, MCP modeling, PNG and 3MF export, and save/reopen on Linux x64, Mac Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42278917809). The CLI runs Alien Forma in a compatible browser. Read the release notes for limitations.
+Version 0.7.0 is a preview. Exact Windows x64 portable and CLI installation checks passed. Native Linux/macOS checks for this exact archive are pending; earlier 0.6.9 results do not qualify 0.7.0. The CLI runs Alien Forma in a compatible browser. Read the release notes for limitations.
 
 ## Interface language
 

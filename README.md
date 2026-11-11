@@ -12,19 +12,19 @@ Animation is experimental. For now, the most practical way to set up motion is w
 
 | Distribution | Requirements |
 | --- | --- |
-| [Microsoft Store — 0.7.3.0](https://apps.microsoft.com/detail/9MW9G4MGBXZL) | Windows 10/11 x64. Install and manage updates through the Store. |
+| [Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL) | Windows 10/11 x64. Install and manage updates through the Store. |
 | Windows x64 portable | Run the executable; Node.js is not required. Preserve the adjacent `Forma-data` folder when updating. |
 | Command-line package (.tgz) | Node.js 22.12 or newer; includes the compiled browser application and MCP bridge. |
 
-Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). **[Alien Forma 0.7.0 Preview — Assemblies in motion](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7)** adds a dedicated Animation workspace, joint keyframes, coordinated poses, sampled inspection and a more direct MCP workflow. It also improves complex-assembly opening/editing, camera and selection control, motion captures and everyday project operations.
+Downloads and `SHA256SUMS.txt` are attached to each [release](https://github.com/congestedai/Forma/releases). **[Alien Forma 0.7.4 Preview — Assemblies in motion](https://github.com/congestedai/Forma/releases/tag/v0.7.0-preview.rc7)** adds a dedicated Animation workspace, joint keyframes, coordinated poses, sampled inspection and a more direct MCP workflow. It also improves complex-assembly opening/editing, camera and selection control, motion captures and everyday project operations.
 
-**Maintenance build, 10 November 2026:** GitHub **0.7.4** in the existing 0.7 release; Microsoft Store **0.7.3.0 available**, with **0.7.4.0 submitted for separate certification**. This patch fixes Store MCP setup without an external Node.js installation. Check [versions and channels](docs/VERSOES.md). Windows x64 portable and embedded-Node MCP checks passed for 0.7.4. [The original 0.7.0 CLI installation and basic MCP modeling/capture/export/save-reopen checks passed on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567).
+**Current maintenance build: 0.7.4.** This patch improves MCP discovery and continuity between agents. The Microsoft Store installation includes its own Node runtime for MCP. Check [versions and channels](docs/VERSOES.md). Windows x64 portable and embedded-Node MCP checks passed for 0.7.4. [The original 0.7.0 CLI installation and basic MCP modeling/capture/export/save-reopen checks passed on Linux x64, macOS Intel and Apple Silicon](https://github.com/congestedai/Forma/actions/runs/42731199567).
 
 ![Robotic arm in the actual Alien Forma viewport](docs/assets/robot-arm-hero.png)
 
 ![Square near the floor followed by a raised circle](docs/assets/robot-arm-square-circle-loop.gif)
 
-[Explore 0.7.0](https://congestedai.github.io/Forma/updates/0.7.0.html) · [Technical drawing PDF](docs/assets/robot-arm-general-arrangement.pdf)
+[Explore the 0.7 update](https://congestedai.github.io/Forma/updates/0.7.0.html) · [Technical drawing PDF](docs/assets/robot-arm-general-arrangement.pdf)
 
 The motion overlay is a presentation annotation. The arm and drawing are digital design studies, not physically certified mechanisms or complete fabrication instructions. Structural analysis is experimental and requires external supported solver components; these are not bundled in the public downloads. Native sheets retain some Portuguese labels.
 

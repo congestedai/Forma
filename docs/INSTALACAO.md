@@ -4,9 +4,9 @@
 
 [Download Alien Forma from Microsoft Store](https://apps.microsoft.com/detail/9MW9G4MGBXZL).
 
-Available version: **0.7.3.0**; **0.7.4.0 submitted for certification**. Use Microsoft Store to install and manage updates. Store package 0.7.3.0 adds the `forma.exe` execution alias and uses its embedded Node runtime for MCP; a separate Node.js/npm installation is not needed for this Store connection. See the [MCP guide](MCP.md).
+Use Microsoft Store to install and manage updates. The current Store package includes the `forma.exe` execution alias and uses its embedded Node runtime for MCP; a separate Node.js/npm installation is not needed for this Store connection. See the [MCP guide](MCP.md).
 
-New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. The existing 0.7 GitHub release now contains maintenance build 0.7.4; Microsoft Store offers 0.7.3.0 while 0.7.4.0 is under separate certification. Check the [release channels](VERSOES.md) for the version offered by each channel. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
+New preview builds will be published on **GitHub first**. Store updates follow Microsoft's review and may arrive later. Check the [release channels](VERSOES.md) for current version information. Store, portable and browser profiles are separate: save projects and export themes before switching distributions; do not assume settings or local projects transfer automatically.
 
 ## Windows portable
 
